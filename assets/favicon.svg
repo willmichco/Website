@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="8" fill="#071a2d"/>
+  <rect x="7" y="7" width="50" height="50" rx="3" fill="none" stroke="#c9a565"/>
+  <path d="M32 16v32" stroke="#c9a565"/>
+  <text x="19" y="39" fill="#e6cc99" font-family="Georgia,serif" font-size="20" text-anchor="middle">N</text>
+  <text x="45" y="39" fill="#e6cc99" font-family="Georgia,serif" font-size="20" text-anchor="middle">L</text>
+</svg>
