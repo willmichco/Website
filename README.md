@@ -88,6 +88,7 @@ Mọi chỗ cần điền đều được đánh dấu bằng `[dấu ngoặc vu
 │   ├── cong-chung.html
 │   └── thua-ke.html            (chuyển hướng cũ, đã đánh dấu noindex)
 ├── assets/                     Logo, ảnh, biểu tượng
+│   └── fonts/                  Font chữ tự lưu trữ (woff2)
 ├── styles.css                  Toàn bộ giao diện
 ├── script.js                   Menu, hiệu ứng, xử lý biểu mẫu  ← chứa CẤU HÌNH
 ├── sitemap.xml                 Sơ đồ website cho công cụ tìm kiếm
@@ -107,7 +108,8 @@ Mọi chỗ cần điền đều được đánh dấu bằng `[dấu ngoặc vu
 | Giờ làm việc | tất cả tệp `.html` | `08:00 — 17:30` |
 | Hồ sơ luật sư | `gioi-thieu.html` | `lawyer-card` |
 | Câu hỏi thường gặp | `lien-he.html` | `faq-item` |
-| Màu sắc giao diện | `styles.css` | `:root` (dòng đầu tệp) |
+| Màu sắc giao diện | `styles.css` | `:root` |
+| Font chữ | `styles.css` | `--serif` / `--sans` trong `:root` |
 
 **Đổi số điện thoại trên toàn bộ website bằng một lệnh:**
 
@@ -165,6 +167,20 @@ Mở trình duyệt tại <http://localhost:8000>.
 **Hiệu năng**
 - Toàn bộ ảnh đã chuyển sang định dạng WebP — dung lượng giảm **từ 3,7 MB xuống còn khoảng 150 KB**
 - Không dùng thư viện ngoài, không webfont tải từ máy chủ khác, không mã theo dõi
+
+**Font chữ và khả năng đọc tiếng Việt**
+- **Lora** (tiêu đề) và **Be Vietnam Pro** (phần thân) — cả hai hỗ trợ đầy đủ
+  ký tự tiếng Việt, kể cả bộ dấu chồng khó nhất: ấ ầ ẩ ẫ ậ ế ề ể ễ ệ ố ồ ổ ỗ ộ ớ ờ ở ỡ ợ ứ ừ ử ữ ự
+- **Tự lưu trữ** tại `assets/fonts/` (giấy phép SIL Open Font License 1.1) —
+  không gửi bất kỳ yêu cầu nào tới máy chủ của bên thứ ba, giữ nguyên cam kết
+  bảo mật trong Chính sách bảo mật
+- Khoảng cách dòng của tiêu đề được nới riêng cho tiếng Việt, tránh dấu thanh
+  ở dòng dưới va vào phần thòng xuống của dòng trên
+
+> ⚠️ **Không đổi sang Georgia, Times New Roman hay Arial cho phần tiêu đề.**
+> Các font này thiếu glyph dấu chồng tiếng Việt, khiến chữ hiển thị sai kiểu
+> `Thâ´u hiê?u vâ´n đê`` thay vì `Thấu hiểu vấn đề`. Đây chính là lỗi đã được
+> khắc phục ở phiên bản này.
 
 **Khả năng tiếp cận**
 - Liên kết bỏ qua nội dung, nhãn ARIA, viền hiển thị rõ khi điều hướng bằng bàn phím
