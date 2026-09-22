@@ -1,0 +1,8 @@
+# Công Ty Luật TNHH Luật Sư Nam
+User-agent: *
+Allow: /
+
+# Trang chuyển hướng cũ, không cần lập chỉ mục
+Disallow: /dich-vu/thua-ke.html
+
+Sitemap: https://luatsunam.vn/sitemap.xml
