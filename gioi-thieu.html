@@ -145,42 +145,62 @@
             </div>
             <p>Mỗi hồ sơ có một luật sư chịu trách nhiệm xuyên suốt, để khách hàng luôn biết cần trao đổi với ai.</p>
           </div>
-          <div class="team-grid">
+          <div class="team-grid team-grid-single">
           <article class="lawyer-card reveal">
             <div class="lawyer-photo" aria-hidden="true">N</div>
             <h3>Luật sư Nam</h3>
             <span class="lawyer-role">Luật sư điều hành</span>
-            <dl><dt>Thẻ luật sư</dt><dd>[số thẻ]</dd><dt>Đoàn Luật sư</dt><dd>[Đoàn Luật sư TP. Hồ Chí Minh]</dd><dt>Năm hành nghề</dt><dd>[năm]</dd></dl>
             <p>Phụ trách chuyên môn và trực tiếp đồng hành cùng khách hàng trong các vụ việc tranh tụng và tư vấn phức tạp. Định hướng của luật sư là làm rõ mục tiêu thực sự của khách hàng trước khi lựa chọn con đường pháp lý phù hợp.</p>
             <ul class="lawyer-tags"><li>Hình sự</li><li>Tranh tụng</li><li>Dân sự</li><li>Đất đai</li></ul>
           </article>
-          <article class="lawyer-card reveal delay-1">
-            <div class="lawyer-photo" aria-hidden="true">LS</div>
-            <h3>[Họ và tên luật sư]</h3>
-            <span class="lawyer-role">Luật sư thành viên</span>
-            <dl><dt>Thẻ luật sư</dt><dd>[số thẻ]</dd><dt>Đoàn Luật sư</dt><dd>[tên Đoàn Luật sư]</dd><dt>Năm hành nghề</dt><dd>[năm]</dd></dl>
-            <p>[Mô tả ngắn 2–3 câu về định hướng hành nghề và kinh nghiệm nổi bật của luật sư.]</p>
-            <ul class="lawyer-tags"><li>Hôn nhân &amp; Gia đình</li><li>Thừa kế</li><li>Lao động</li></ul>
-          </article>
-          <article class="lawyer-card reveal delay-2">
-            <div class="lawyer-photo" aria-hidden="true">CV</div>
-            <h3>[Họ và tên chuyên viên]</h3>
-            <span class="lawyer-role">Chuyên viên pháp lý</span>
-            <dl><dt>Chuyên môn</dt><dd>[lĩnh vực phụ trách]</dd><dt>Trình độ</dt><dd>[Cử nhân Luật — trường]</dd><dt>Phụ trách</dt><dd>[hồ sơ, thủ tục hành chính…]</dd></dl>
-            <p>[Mô tả ngắn về vai trò hỗ trợ hồ sơ, thủ tục và liên hệ cơ quan nhà nước.]</p>
-            <ul class="lawyer-tags"><li>Hồ sơ</li><li>Thủ tục</li><li>Công chứng</li></ul>
-          </article>
+
+          <aside class="team-note reveal delay-1">
+            <h3>Một đầu mối, xuyên suốt hồ sơ</h3>
+            <p>Khi tiếp nhận vụ việc, chúng tôi chỉ định một luật sư chịu trách nhiệm từ buổi trao đổi đầu tiên cho đến khi công việc hoàn tất. Khách hàng không phải kể lại sự việc từ đầu với nhiều người khác nhau, và luôn biết cần liên hệ với ai khi có diễn biến mới.</p>
+            <p>Tùy tính chất vụ việc, luật sư phụ trách có thể huy động thêm đồng nghiệp hoặc chuyên gia trong từng lĩnh vực hẹp. Dù vậy, <strong>đầu mối trao đổi với khách hàng vẫn là một người duy nhất</strong>, và phạm vi tham gia của từng người đều được thông báo trước.</p>
+            <a class="arrow-link" href="lien-he.html">Trao đổi với luật sư phụ trách <span>&rarr;</span></a>
+          </aside>
           </div>
+
           <!-- ====================================================================
            GHI CHÚ CHO NGƯỜI QUẢN TRỊ WEBSITE (khách truy cập không nhìn thấy)
            --------------------------------------------------------------------
-            Dành cho quản trị website: các nội dung trong dấu [ngoặc vuông] là chỗ điền thông tin
-            thật của từng luật sư (họ tên đầy đủ, số Thẻ luật sư, Đoàn Luật sư, năm hành nghề). Để
-            thêm ảnh chân dung, đặt tệp ảnh vào thư mục assets/ rồi điền đường dẫn vào trường photo
-            trong tệp gioi-thieu.html. Vui lòng chỉ công bố thông tin chính xác và đã được luật sư
-            đồng ý.
+           1) BỔ SUNG CHỨNG CHỈ HÀNH NGHỀ CHO LUẬT SƯ NAM
+              Dán khối sau vào ngay dưới dòng <span class="lawyer-role">, rồi
+              thay các giá trị trong [ngoặc vuông] bằng thông tin thật:
+
+              <dl>
+                <dt>Thẻ luật sư</dt><dd>[số thẻ]</dd>
+                <dt>Đoàn Luật sư</dt><dd>[tên Đoàn Luật sư]</dd>
+                <dt>Năm hành nghề</dt><dd>[năm]</dd>
+              </dl>
+
+           2) THÊM LUẬT SƯ / CHUYÊN VIÊN KHÁC
+              Xoá thẻ <aside class="team-note"> ở trên và bỏ lớp
+              "team-grid-single", sau đó sao chép khối <article class="lawyer-card">
+              cho từng người. Mẫu đầy đủ:
+
+              <article class="lawyer-card reveal delay-1">
+                <div class="lawyer-photo" aria-hidden="true">LS</div>
+                <h3>[Họ và tên luật sư]</h3>
+                <span class="lawyer-role">Luật sư thành viên</span>
+                <dl>
+                  <dt>Thẻ luật sư</dt><dd>[số thẻ]</dd>
+                  <dt>Đoàn Luật sư</dt><dd>[tên Đoàn Luật sư]</dd>
+                  <dt>Năm hành nghề</dt><dd>[năm]</dd>
+                </dl>
+                <p>[Mô tả ngắn 2-3 câu về định hướng hành nghề và kinh nghiệm.]</p>
+                <ul class="lawyer-tags"><li>Lĩnh vực 1</li><li>Lĩnh vực 2</li></ul>
+              </article>
+
+              Muốn thêm ảnh chân dung: đặt tệp ảnh vào thư mục assets/ rồi thay
+              nội dung của <div class="lawyer-photo"> bằng:
+              <img src="assets/ten-anh.webp" alt="Ảnh chân dung [họ tên]"
+                   width="92" height="92" loading="lazy" />
+
+           3) NGUYÊN TẮC: chỉ công bố thông tin chính xác và đã được từng luật sư
+              đồng ý. Không đăng nội dung chưa kiểm chứng lên trang Đội ngũ.
            ==================================================================== -->
-        </div>
       </section>
 
       <section class="section">
