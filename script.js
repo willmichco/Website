@@ -1,3 +1,14 @@
+/* =====================================================================
+   CẤU HÌNH — Công Ty Luật TNHH Luật Sư Nam
+   ---------------------------------------------------------------------
+   WEB3FORMS_KEY: lấy miễn phí tại https://web3forms.com (nhập email công
+   ty -> nhận access key qua mail -> dán vào đây). Khi chưa dán, form tự
+   động chuyển sang mở ứng dụng email nên website vẫn hoạt động bình thường.
+   ===================================================================== */
+const WEB3FORMS_KEY = 'DAN_ACCESS_KEY_WEB3FORMS_VAO_DAY';
+const CONTACT_EMAIL = 'luatsunam.hcm@gmail.com';
+const CONTACT_PHONE = '0983 498 499';
+
 const header = document.querySelector('#site-header');
 const menuButton = document.querySelector('.menu-toggle');
 const nav = document.querySelector('#site-nav');
@@ -38,7 +49,9 @@ const sectionObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (!entry.isIntersecting) return;
     navLinks.forEach((link) => {
-      link.classList.toggle('active', link.getAttribute('href') === `#${entry.target.id}`);
+      const href = link.getAttribute('href') || '';
+      const hash = href.slice(href.indexOf('#'));
+      link.classList.toggle('active', href.includes('#') && hash === `#${entry.target.id}`);
     });
   });
 }, { rootMargin: '-40% 0px -50% 0px' });
@@ -47,29 +60,92 @@ sections.forEach((section) => sectionObserver.observe(section));
 const form = document.querySelector('#contact-form');
 if (form) {
   const formStatus = form.querySelector('.form-success');
-  form.addEventListener('submit', (event) => {
-    event.preventDefault();
-    const data = new FormData(form);
-    const name = data.get('name')?.toString().trim() || '';
-    const phone = data.get('phone')?.toString().trim() || '';
-    const email = data.get('email')?.toString().trim() || '';
-    const service = data.get('service')?.toString().trim() || 'Chưa chọn lĩnh vực';
-    const message = data.get('message')?.toString().trim() || 'Chưa cung cấp nội dung chi tiết';
-    const subject = `Yêu cầu tư vấn pháp lý - ${service}`;
+  const submitBtn = form.querySelector('button[type="submit"]');
+  const btnLabel = submitBtn ? submitBtn.innerHTML : '';
+
+  const setStatus = (text, isError) => {
+    if (!formStatus) return;
+    formStatus.textContent = text;
+    formStatus.classList.toggle('error', Boolean(isError));
+    formStatus.classList.add('visible');
+  };
+
+  const buildMailto = (d) => {
+    const subject = `Yêu cầu tư vấn pháp lý - ${d.service || 'Chưa chọn lĩnh vực'}`;
     const body = [
-      `Họ và tên: ${name}`,
-      `Số điện thoại: ${phone}`,
-      `Email: ${email || 'Không cung cấp'}`,
-      `Lĩnh vực: ${service}`,
+      `Họ và tên: ${d.name}`,
+      `Số điện thoại: ${d.phone}`,
+      `Email: ${d.email || 'Không cung cấp'}`,
+      `Lĩnh vực: ${d.service || 'Chưa chọn'}`,
       '',
       'Nội dung cần tư vấn:',
-      message,
+      d.message || 'Chưa cung cấp nội dung chi tiết',
     ].join('\n');
-    if (formStatus) {
-      formStatus.textContent = `Cảm ơn ${name || 'bạn'}. Ứng dụng email sẽ mở để bạn kiểm tra và gửi yêu cầu.`;
-      formStatus.classList.add('visible');
+    return `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  };
+
+  form.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    const fd = new FormData(form);
+
+    // Bẫy chống spam: bot thường điền mọi ô, người thật thì không thấy ô này.
+    if ((fd.get('botcheck') || '').toString().trim()) return;
+
+    const d = {
+      name: (fd.get('name') || '').toString().trim(),
+      phone: (fd.get('phone') || '').toString().trim(),
+      email: (fd.get('email') || '').toString().trim(),
+      service: (fd.get('service') || '').toString().trim(),
+      message: (fd.get('message') || '').toString().trim(),
+    };
+
+    // Chưa gắn access key -> vẫn dùng được ngay qua ứng dụng email.
+    if (!WEB3FORMS_KEY || WEB3FORMS_KEY.startsWith('DAN_')) {
+      setStatus(`Cảm ơn ${d.name || 'bạn'}. Ứng dụng email sẽ mở để bạn kiểm tra và gửi yêu cầu.`, false);
+      window.location.href = buildMailto(d);
+      return;
     }
-    window.location.href = `mailto:luatsunam.hcm@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+    if (submitBtn) {
+      submitBtn.setAttribute('aria-busy', 'true');
+      submitBtn.innerHTML = 'Đang gửi…';
+    }
+    setStatus('Đang gửi yêu cầu của bạn…', false);
+
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_KEY,
+          subject: `[Website] Yêu cầu tư vấn - ${d.service || 'Chưa chọn lĩnh vực'}`,
+          from_name: 'Website Luật Sư Nam',
+          'Họ và tên': d.name,
+          'Số điện thoại': d.phone,
+          Email: d.email || 'Không cung cấp',
+          'Lĩnh vực': d.service || 'Chưa chọn',
+          'Nội dung': d.message || 'Chưa cung cấp nội dung chi tiết',
+        }),
+      });
+      const json = await res.json().catch(() => ({}));
+      if (!res.ok || json.success === false) throw new Error(json.message || 'Gửi không thành công');
+
+      form.reset();
+      setStatus(
+        `Cảm ơn ${d.name || 'bạn'}. Chúng tôi đã nhận được yêu cầu và sẽ liên hệ lại trong thời gian sớm nhất.`,
+        false,
+      );
+    } catch (err) {
+      setStatus(
+        `Rất tiếc, chưa gửi được yêu cầu. Vui lòng gọi ${CONTACT_PHONE} hoặc email ${CONTACT_EMAIL} để được hỗ trợ ngay.`,
+        true,
+      );
+    } finally {
+      if (submitBtn) {
+        submitBtn.removeAttribute('aria-busy');
+        submitBtn.innerHTML = btnLabel;
+      }
+    }
   });
 }
 

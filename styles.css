@@ -1,3 +1,109 @@
+/* =====================================================================
+   FONT CHỮ TỰ LƯU TRỮ — hỗ trợ đầy đủ dấu tiếng Việt
+   ---------------------------------------------------------------------
+   Be Vietnam Pro : font thiết kế riêng cho tiếng Việt, dùng cho phần thân
+   Lora           : serif trang trọng, dùng cho tiêu đề
+   Cả hai theo giấy phép SIL Open Font License 1.1.
+   Lưu tại máy chủ của website -> không gửi yêu cầu nào tới bên thứ ba.
+   ===================================================================== */
+
+@font-face {
+  font-family: 'Be Vietnam Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('assets/fonts/be-vietnam-pro-400-normal-vietnamese.woff2') format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+@font-face {
+  font-family: 'Be Vietnam Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('assets/fonts/be-vietnam-pro-400-normal-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Be Vietnam Pro';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('assets/fonts/be-vietnam-pro-500-normal-vietnamese.woff2') format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+@font-face {
+  font-family: 'Be Vietnam Pro';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('assets/fonts/be-vietnam-pro-500-normal-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Be Vietnam Pro';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('assets/fonts/be-vietnam-pro-600-normal-vietnamese.woff2') format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+@font-face {
+  font-family: 'Be Vietnam Pro';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('assets/fonts/be-vietnam-pro-600-normal-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Be Vietnam Pro';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('assets/fonts/be-vietnam-pro-700-normal-vietnamese.woff2') format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+@font-face {
+  font-family: 'Be Vietnam Pro';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('assets/fonts/be-vietnam-pro-700-normal-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Lora';
+  font-style: italic;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('assets/fonts/lora-400-700-italic-vietnamese.woff2') format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+@font-face {
+  font-family: 'Lora';
+  font-style: italic;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('assets/fonts/lora-400-700-italic-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('assets/fonts/lora-400-700-normal-vietnamese.woff2') format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('assets/fonts/lora-400-700-normal-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 :root {
   --navy: #071a2d;
   --navy-2: #0c2941;
@@ -8,14 +114,19 @@
   --white: #fff;
   --muted: #6a737d;
   --line: #dfe3e6;
+  /* Màu nhận diện lấy từ logo công ty — dùng làm màu nhấn phụ */
+  --brand-blue: #1585d0;
+  --brand-blue-deep: #0f6ba8;
+  --brand-blue-soft: #e8f3fb;
+  --brand-green: #7cb342;
   --container: 1180px;
-  --serif: Georgia, "Times New Roman", serif;
-  --sans: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  --serif: 'Lora', 'Times New Roman', Times, serif;
+  --sans: 'Be Vietnam Pro', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
 }
 
 * { box-sizing: border-box; }
 html { min-width: 320px; scroll-behavior: smooth; font-size: 16px; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
-body { width: 100%; min-width: 320px; margin: 0; overflow-x: clip; color: var(--ink); font-family: var(--sans); background: var(--white); line-height: 1.65; font-kerning: normal; -webkit-font-smoothing: antialiased; }
+body { width: 100%; min-width: 320px; margin: 0; overflow-x: clip; color: var(--ink); font-family: var(--sans); background: var(--white); line-height: 1.72; font-kerning: normal; -webkit-font-smoothing: antialiased; }
 .service-detail-page { font-size: 1rem; }
 @supports not (overflow: clip) { body { overflow-x: hidden; } }
 a { color: inherit; text-decoration: none; }
@@ -36,8 +147,8 @@ p, li { text-wrap: pretty; }
 .brand-mark { width: 68px; height: 68px; display: inline-flex; align-items: center; justify-content: center; border: 2px solid var(--gold-light); border-radius: 50%; background: var(--white); overflow: hidden; box-shadow: 0 8px 22px rgba(0,0,0,.22); }
 .brand-mark img { width: 100%; height: 100%; display: block; border-radius: 50%; object-fit: cover; transform: scale(1.07); transform-origin: center; }
 .brand-copy { display: flex; flex-direction: column; line-height: 1.15; }
-.brand-copy strong { font-family: var(--serif); font-size: 22px; letter-spacing: 1.8px; }
-.brand-copy small { margin-top: 5px; color: var(--gold-light); font-size: 10px; letter-spacing: 2.8px; }
+.brand-copy strong { font-family: var(--serif); font-size: 23px; font-weight: 600; letter-spacing: 1.2px; }
+.brand-copy small { margin-bottom: 3px; color: var(--gold-light); font-size: 9.5px; font-weight: 600; letter-spacing: 1.6px; }
 .site-nav { display: flex; align-items: center; gap: clamp(16px, 1.9vw, 30px); margin-left: auto; }
 .site-nav a { position: relative; font-size: 13px; font-weight: 600; letter-spacing: .2px; color: rgba(255,255,255,.86); }
 .site-nav a::after { content: ""; position: absolute; left: 0; right: 100%; bottom: -11px; height: 1px; background: var(--gold); transition: right .25s; }
@@ -56,11 +167,11 @@ p, li { text-wrap: pretty; }
 .hero-bg::after { content: ""; position: absolute; inset: 0; opacity: .35; background-image: linear-gradient(90deg, transparent 0 49.9%, rgba(255,255,255,.045) 50%, transparent 50.1%), linear-gradient(0deg, transparent 0 49.9%, rgba(255,255,255,.035) 50%, transparent 50.1%); background-size: 160px 160px; }
 .hero-content { position: relative; z-index: 2; display: grid; grid-template-columns: minmax(0, 1fr) 430px; gap: 68px; align-items: center; padding-top: 36px; }
 .hero-copy { max-width: 650px; }
-.eyebrow { display: flex; align-items: center; gap: 12px; margin-bottom: 23px; color: #85714f; font-size: 11px; font-weight: 700; letter-spacing: 2.1px; }
+.eyebrow { display: flex; align-items: center; gap: 12px; margin-bottom: 23px; color: #85714f; font-size: 11px; font-weight: 700; letter-spacing: 1.4px; line-height: 1.5; }
 .eyebrow > span { width: 38px; height: 1px; background: currentColor; }
 .eyebrow.light { color: var(--gold-light); }
-.hero h1, h2 { margin: 0; font-family: var(--serif); font-weight: 400; line-height: 1.08; }
-.hero h1 { font-size: clamp(54px, 5vw, 78px); letter-spacing: -.9px; }
+.hero h1, h2 { margin: 0; font-family: var(--serif); font-weight: 400; line-height: 1.22; }
+.hero h1 { font-size: clamp(46px, 4.4vw, 68px); letter-spacing: -.2px; }
 h1 em, h2 em { color: var(--gold); font-weight: 400; }
 .hero-copy > p { max-width: 590px; margin: 26px 0 36px; color: rgba(255,255,255,.76); font-size: 17px; line-height: 1.75; }
 .hero-portrait { position: relative; width: 100%; margin: 0; }
@@ -94,7 +205,7 @@ h1 em, h2 em { color: var(--gold); font-weight: 400; }
 
 .intro { background: var(--cream); }
 .intro-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 90px; align-items: start; }
-h2 { color: var(--navy); font-size: clamp(40px, 4vw, 57px); line-height: 1.12; letter-spacing: -.6px; }
+h2 { color: var(--navy); font-size: clamp(34px, 3.4vw, 50px); line-height: 1.24; letter-spacing: -.1px; }
 .intro-copy { padding-top: 36px; }
 .intro-copy p { color: var(--muted); font-size: 15px; }
 .intro-copy .lead { margin-top: 0; color: var(--ink); font-family: var(--serif); font-size: 20px; line-height: 1.65; }
@@ -122,12 +233,12 @@ h2 { color: var(--navy); font-size: clamp(40px, 4vw, 57px); line-height: 1.12; l
 .service-link span { margin-left: 15px; font-size: 15px; }
 .service-card:hover .service-link { color: var(--gold-light); }
 
-.detail-hero { position: relative; min-height: 560px; padding: 165px 0 88px; color: var(--white); background: linear-gradient(135deg, rgba(7,26,45,.96), rgba(12,41,65,.92)), url("assets/hero-law-office.png") center/cover; overflow: hidden; }
+.detail-hero { position: relative; min-height: 560px; padding: 165px 0 88px; color: var(--white); background: linear-gradient(135deg, rgba(7,26,45,.96), rgba(12,41,65,.92)), url("assets/hero-law-office.webp") center/cover; overflow: hidden; }
 .detail-hero::after { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 82% 18%, rgba(201,165,101,.18), transparent 30%); pointer-events: none; }
 .detail-hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, .55fr); gap: 70px; align-items: end; }
 .detail-hero-grid > *, .detail-layout > *, .detail-list > *, .detail-columns > * { min-width: 0; }
 .back-link { display: inline-flex; align-items: center; gap: 9px; margin-bottom: 28px; color: var(--gold-light); text-transform: uppercase; font-size: 10px; font-weight: 800; letter-spacing: 1.3px; }
-.detail-hero h1 { margin: 0; max-width: 760px; font-family: var(--serif); font-size: clamp(52px, 6vw, 82px); font-weight: 400; line-height: 1.03; letter-spacing: -.9px; }
+.detail-hero h1 { margin: 0; max-width: 760px; font-family: var(--serif); font-size: clamp(44px, 5vw, 70px); font-weight: 400; line-height: 1.16; letter-spacing: -.2px; }
 .detail-hero p { max-width: 670px; margin: 26px 0 34px; color: rgba(255,255,255,.72); font-size: 16px; line-height: 1.78; }
 .detail-card { padding: 34px; border: 1px solid rgba(201,165,101,.42); background: rgba(4,17,30,.52); backdrop-filter: blur(10px); }
 .detail-card > span { color: var(--gold-light); font-family: var(--serif); font-size: 40px; }
@@ -411,8 +522,8 @@ h2 { color: var(--navy); font-size: clamp(40px, 4vw, 57px); line-height: 1.12; l
   .hero-content { gap: 36px; padding-bottom: 160px; }
   .hero-portrait::before { inset: 10px -7px 54px 10px; }
   .hero-portrait figcaption { padding-right: 4px; }
-  .hero h1 { font-size: 43px; }
-  h2 { font-size: 38px; line-height: 1.14; }
+  .hero h1 { font-size: 38px; line-height: 1.2; }
+  h2 { font-size: 32px; line-height: 1.26; }
   .eyebrow { font-size: 9px; letter-spacing: 1.5px; }
   .trust-grid span { font-size: 8px; }
   .form-row, .process-grid { grid-template-columns: 1fr; }
@@ -444,4 +555,196 @@ h2 { color: var(--navy); font-size: clamp(40px, 4vw, 57px); line-height: 1.12; l
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
   .reveal { opacity: 1; transform: none; }
+}
+
+/* ============================================================
+   MÀU NHẤN TỪ LOGO — hoà nhận diện xanh dương vào tông navy/gold
+   ============================================================ */
+.site-header { border-bottom: 1px solid rgba(21,133,208,.28); }
+.brand-mark { border-color: var(--brand-blue); background: var(--white); }
+.header-cta .phone-icon { border-color: rgba(21,133,208,.75); color: #7fc4f0; }
+.site-nav a::after { background: linear-gradient(90deg, var(--brand-blue), var(--gold)); height: 2px; }
+.service-card::before { background: linear-gradient(90deg, var(--brand-blue), var(--gold)); }
+.service-card:hover .service-icon { color: #7fc4f0; }
+.arrow-link:hover { border-bottom-color: var(--brand-blue); }
+a:focus-visible, button:focus-visible, input:focus-visible,
+select:focus-visible, textarea:focus-visible {
+  outline: 3px solid var(--brand-blue); outline-offset: 2px; border-radius: 2px;
+}
+
+/* ============================================================
+   KHỐI DÙNG CHUNG CHO CÁC TRANG MỚI
+   ============================================================ */
+.page-hero { position: relative; padding: 168px 0 84px; color: var(--white); overflow: hidden;
+  background: linear-gradient(135deg, #04111e 0%, #071a2d 55%, #0b2942 100%); }
+.page-hero::before { content: ""; position: absolute; inset: 0; pointer-events: none;
+  background-image: radial-gradient(circle at 80% 20%, rgba(21,133,208,.20), transparent 34%),
+                    radial-gradient(circle at 14% 82%, rgba(201,165,101,.12), transparent 38%); }
+.page-hero::after { content: ""; position: absolute; inset: 0; opacity: .3; pointer-events: none;
+  background-image: linear-gradient(90deg, transparent 0 49.9%, rgba(255,255,255,.045) 50%, transparent 50.1%),
+                    linear-gradient(0deg, transparent 0 49.9%, rgba(255,255,255,.035) 50%, transparent 50.1%);
+  background-size: 160px 160px; }
+.page-hero > .container { position: relative; z-index: 1; }
+.page-hero h1 { margin: 0; max-width: 20ch; font-family: var(--serif); font-weight: 400;
+  font-size: clamp(36px, 4.3vw, 58px); line-height: 1.2; letter-spacing: -.1px; }
+.page-hero h1 em { color: var(--gold); font-style: italic; }
+.page-hero > .container > p { max-width: 64ch; margin: 24px 0 0; color: rgba(255,255,255,.74);
+  font-size: 16px; line-height: 1.8; }
+
+.breadcrumb { display: flex; flex-wrap: wrap; align-items: center; gap: 9px; margin: 0 0 26px; padding: 0;
+  list-style: none; color: rgba(255,255,255,.55); font-size: 11px; letter-spacing: .6px; }
+.breadcrumb a { color: var(--gold-light); }
+.breadcrumb a:hover { color: var(--white); }
+.breadcrumb li + li::before { content: "/"; margin-right: 9px; color: rgba(255,255,255,.3); }
+.breadcrumb [aria-current] { color: rgba(255,255,255,.8); }
+
+.prose h3 { margin: 34px 0 12px; color: var(--navy); font-family: var(--serif); font-size: 24px; font-weight: 400; }
+.prose p, .prose li { color: var(--muted); font-size: 15px; line-height: 1.85; }
+.prose strong { color: var(--ink); }
+
+/* ---------- TRANG GIỚI THIỆU ---------- */
+.about-lead { background: var(--cream); }
+.about-lead-grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: 80px; align-items: start; }
+.about-lead .lead { margin-top: 0; color: var(--ink); font-family: var(--serif); font-size: 21px; line-height: 1.62; }
+.about-lead p { color: var(--muted); font-size: 15px; line-height: 1.85; }
+
+.pillar-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0;
+  margin-top: 54px; border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+.pillar { padding: 34px 30px 32px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line);
+  background: var(--white); transition: background .3s, transform .3s; }
+.pillar:hover { background: var(--brand-blue-soft); transform: translateY(-3px); }
+.pillar span { display: inline-grid; place-content: center; width: 44px; height: 44px; margin-bottom: 20px;
+  border: 1px solid var(--brand-blue); border-radius: 50%; color: var(--brand-blue-deep);
+  font-family: var(--serif); font-size: 15px; }
+.pillar h3 { margin: 0 0 11px; color: var(--navy); font-family: var(--serif); font-size: 21px; font-weight: 400; }
+.pillar p { margin: 0; color: var(--muted); font-size: 13.5px; line-height: 1.78; }
+
+.team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px; margin-top: 46px; }
+.lawyer-card { position: relative; display: flex; flex-direction: column; padding: 34px 30px 30px;
+  border: 1px solid var(--line); border-top: 3px solid var(--brand-blue); background: var(--white);
+  transition: box-shadow .3s, transform .3s; }
+.lawyer-card:hover { transform: translateY(-4px); box-shadow: 0 20px 46px rgba(7,26,45,.14); }
+.lawyer-photo { width: 92px; height: 92px; margin-bottom: 22px; display: grid; place-content: center;
+  border-radius: 50%; background: linear-gradient(140deg, var(--navy), var(--brand-blue-deep));
+  color: var(--gold-light); font-family: var(--serif); font-size: 29px; overflow: hidden; }
+.lawyer-photo img { width: 100%; height: 100%; object-fit: cover; }
+.lawyer-card h3 { margin: 0 0 4px; color: var(--navy); font-family: var(--serif); font-size: 25px; font-weight: 400; }
+.lawyer-role { display: block; margin-bottom: 18px; color: var(--brand-blue-deep);
+  text-transform: uppercase; font-size: 10px; font-weight: 800; letter-spacing: 1.5px; }
+.lawyer-card dl { margin: 0 0 18px; padding: 16px 0; border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line); display: grid; grid-template-columns: auto 1fr; gap: 7px 14px; }
+.lawyer-card dt { color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: .9px; }
+.lawyer-card dd { margin: 0; color: var(--ink); font-size: 13px; font-weight: 600; }
+.lawyer-card > p { margin: 0 0 18px; color: var(--muted); font-size: 13.5px; line-height: 1.8; }
+.lawyer-tags { display: flex; flex-wrap: wrap; gap: 7px; margin: auto 0 0; padding: 0; list-style: none; }
+.lawyer-tags li { padding: 5px 11px; background: var(--brand-blue-soft); color: var(--brand-blue-deep);
+  font-size: 11px; font-weight: 600; letter-spacing: .3px; }
+
+.editable-note { display: flex; gap: 14px; margin-top: 34px; padding: 20px 24px;
+  border-left: 3px solid var(--gold); background: #fdf9f1; }
+.editable-note span { color: var(--gold); font-size: 18px; line-height: 1.4; }
+.editable-note p { margin: 0; color: #6d5a38; font-size: 13px; line-height: 1.75; }
+.editable-note code { padding: 1px 6px; background: rgba(201,165,101,.18); font-size: 12px; }
+
+/* ---------- TRANG LIÊN HỆ ---------- */
+.contact-page-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 60px; align-items: start; }
+.contact-info-list { display: grid; gap: 2px; margin: 0 0 30px; padding: 0; list-style: none;
+  border: 1px solid var(--line); }
+.contact-info-list li { display: flex; gap: 18px; padding: 22px 24px; background: var(--white);
+  border-bottom: 1px solid var(--line); }
+.contact-info-list li:last-child { border-bottom: 0; }
+.contact-info-list .ci-icon { flex: 0 0 auto; display: grid; place-content: center; width: 42px; height: 42px;
+  border-radius: 50%; background: var(--brand-blue-soft); color: var(--brand-blue-deep); font-size: 17px; }
+.contact-info-list small { display: block; margin-bottom: 4px; color: var(--muted);
+  text-transform: uppercase; font-size: 10px; font-weight: 700; letter-spacing: 1.2px; }
+.contact-info-list strong { display: block; color: var(--navy); font-size: 15.5px; font-weight: 600; line-height: 1.55; }
+.contact-info-list a strong:hover { color: var(--brand-blue-deep); }
+.contact-info-list p { margin: 4px 0 0; color: var(--muted); font-size: 12.5px; line-height: 1.7; }
+
+.map-frame { position: relative; border: 1px solid var(--line); background: var(--cream); }
+.map-frame iframe { width: 100%; height: 420px; display: block; border: 0; filter: saturate(.92); }
+.map-actions { display: flex; flex-wrap: wrap; gap: 10px; padding: 16px 20px; border-top: 1px solid var(--line);
+  background: var(--white); }
+.map-actions a { display: inline-flex; align-items: center; gap: 8px; padding: 9px 16px;
+  border: 1px solid var(--brand-blue); color: var(--brand-blue-deep); font-size: 12px; font-weight: 700;
+  letter-spacing: .4px; transition: background .2s, color .2s; }
+.map-actions a:hover { background: var(--brand-blue); color: var(--white); }
+
+/* ---------- FAQ ---------- */
+.faq { background: var(--cream); }
+.faq-list { max-width: 900px; margin: 44px auto 0; border-top: 1px solid var(--line); }
+.faq-item { border-bottom: 1px solid var(--line); }
+.faq-item summary { position: relative; display: flex; align-items: center; gap: 18px; padding: 24px 52px 24px 0;
+  color: var(--navy); font-family: var(--serif); font-size: 19px; line-height: 1.45; cursor: pointer;
+  list-style: none; transition: color .2s; }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary:hover { color: var(--brand-blue-deep); }
+.faq-item summary::after { content: "+"; position: absolute; right: 6px; top: 50%; transform: translateY(-50%);
+  display: grid; place-content: center; width: 32px; height: 32px; border: 1px solid var(--brand-blue);
+  border-radius: 50%; color: var(--brand-blue-deep); font-family: var(--sans); font-size: 19px; font-weight: 300;
+  transition: transform .25s, background .25s, color .25s; }
+.faq-item[open] summary::after { content: "−"; background: var(--brand-blue); color: var(--white); }
+.faq-item .faq-answer { padding: 0 52px 26px 0; }
+.faq-item .faq-answer p { margin: 0 0 12px; color: var(--muted); font-size: 14.5px; line-height: 1.85; }
+.faq-item .faq-answer p:last-child { margin-bottom: 0; }
+.faq-item .faq-answer a { color: var(--brand-blue-deep); border-bottom: 1px solid currentColor; }
+
+/* ---------- TRẠNG THÁI FORM ---------- */
+.form-success.error { color: #b3261e; }
+.contact-form button[aria-busy="true"] { opacity: .65; pointer-events: none; }
+.form-hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+
+/* ---------- 404 ---------- */
+.error-page { min-height: 100vh; display: flex; flex-direction: column; }
+.error-main { flex: 1; display: grid; place-content: center; padding: 150px 0 90px; text-align: center;
+  color: var(--white); background: linear-gradient(135deg, #04111e, #071a2d 55%, #0b2942); }
+.error-code { margin: 0; color: rgba(21,133,208,.42); font-family: var(--serif);
+  font-size: clamp(110px, 20vw, 200px); line-height: .9; letter-spacing: -4px; }
+.error-main h1 { margin: 12px 0 18px; font-family: var(--serif); font-size: clamp(30px, 4.4vw, 46px);
+  font-weight: 400; line-height: 1.16; }
+.error-main > p { max-width: 54ch; margin: 0 auto 36px; color: rgba(255,255,255,.7); font-size: 15.5px; line-height: 1.8; }
+.error-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; }
+
+/* ---------- BẢN TIẾNG ANH ---------- */
+.lang-switch { display: inline-flex; align-items: center; gap: 6px; margin-left: 18px; padding: 6px 10px;
+  border: 1px solid rgba(255,255,255,.26); color: rgba(255,255,255,.82);
+  font-size: 11px; font-weight: 700; letter-spacing: 1px; transition: border-color .2s, color .2s; }
+.lang-switch:hover { border-color: var(--brand-blue); color: var(--white); }
+
+/* ---------- DẢI MIỄN TRỪ TRÁCH NHIỆM ---------- */
+.legal-disclaimer-bar { padding: 26px 0; border-top: 1px solid rgba(255,255,255,.1);
+  background: #04111e; color: rgba(255,255,255,.52); }
+.legal-disclaimer-bar p { max-width: 94ch; margin: 0; font-size: 12px; line-height: 1.8; }
+.legal-disclaimer-bar a { color: var(--gold-light); border-bottom: 1px solid rgba(230,204,153,.4); }
+
+@media (max-width: 980px) {
+  .about-lead-grid, .contact-page-grid { grid-template-columns: 1fr; gap: 40px; }
+  .pillar-grid { grid-template-columns: 1fr; }
+  .page-hero { padding: 132px 0 64px; }
+  .map-frame iframe { height: 340px; }
+}
+@media (max-width: 560px) {
+  .pillar, .lawyer-card { padding: 26px 22px; }
+  .contact-info-list li { padding: 18px 18px; gap: 14px; }
+  .faq-item summary { padding-right: 44px; font-size: 17px; }
+  .faq-item .faq-answer { padding-right: 0; }
+  .lang-switch { margin-left: 0; }
+}
+
+/* Link mũi tên đặt trên nền tối (khối liên hệ trang chủ) */
+.contact-copy .arrow-link { margin-top: 30px; color: var(--gold-light); border-bottom-color: rgba(201,165,101,.55); }
+.contact-copy .arrow-link:hover { color: var(--white); border-bottom-color: var(--brand-blue); }
+
+/* Bố cục trang Đội ngũ khi chỉ có một hồ sơ luật sư */
+.team-grid-single { grid-template-columns: minmax(300px, 400px) minmax(0, 1fr); align-items: stretch; }
+.team-note { display: flex; flex-direction: column; padding: 34px 36px 32px;
+  border: 1px solid var(--line); border-top: 3px solid var(--gold); background: var(--white); }
+.team-note h3 { margin: 0 0 16px; color: var(--navy); font-family: var(--serif);
+  font-size: 25px; font-weight: 400; line-height: 1.3; }
+.team-note p { margin: 0 0 14px; color: var(--muted); font-size: 14px; line-height: 1.85; }
+.team-note strong { color: var(--ink); }
+.team-note .arrow-link { margin-top: auto; align-self: flex-start; }
+@media (max-width: 860px) {
+  .team-grid-single { grid-template-columns: 1fr; }
+  .team-note { padding: 26px 24px; }
 }
