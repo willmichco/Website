@@ -88,7 +88,7 @@ Mọi chỗ cần điền đều được đánh dấu bằng `[dấu ngoặc vu
 │   ├── index.html · reader.js · reader.css · lx-core.js · search-worker.js
 │   └── data/                       Dữ liệu sinh tự động từ tệp Word — không sửa tay
 ├── chinh-sach-bao-mat/ · dieu-khoan-su-dung/ · mien-tru-trach-nhiem/
-├── en/                             /en/                      Bản tiếng Anh (một trang)
+├── en/                             Bản tiếng Anh — ĐANG TẠM TẮT (/en/ chuyển về trang chủ; nội dung giữ ở index.disabled.html)
 ├── 404.html                        Trang báo lỗi (dùng đường dẫn tuyệt đối từ gốc)
 ├── *.html ở thư mục gốc            (địa chỉ cũ — tự chuyển hướng, noindex)
 ├── _redirects                      Chuyển hướng 301 cho Netlify / Cloudflare Pages
