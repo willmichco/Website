@@ -77,6 +77,12 @@ Mọi chỗ cần điền đều được đánh dấu bằng `[dấu ngoặc vu
 ├── dieu-khoan-su-dung.html     Điều khoản sử dụng
 ├── 404.html                    Trang báo lỗi không tìm thấy
 ├── en/index.html               Bản tiếng Anh
+├── bo-luat-hinh-su/            Tra cứu Bộ luật Hình sự & bình luận (xem mục 8)
+│   ├── index.html              Trang tra cứu
+│   ├── reader.js / reader.css  Trình đọc, mục lục, kết quả tìm kiếm
+│   ├── lx-core.js              Lõi so khớp tiếng Việt (dùng chung)
+│   ├── search-worker.js        Tìm kiếm toàn văn chạy nền
+│   └── data/                   Dữ liệu sinh tự động từ tệp Word — không sửa tay
 ├── dich-vu/                    8 trang lĩnh vực hoạt động
 │   ├── tu-van-thua-ke.html                 Thừa kế
 │   ├── tranh-tung-giai-quyet-tranh-chap.html
@@ -89,6 +95,7 @@ Mọi chỗ cần điền đều được đánh dấu bằng `[dấu ngoặc vu
 │   └── thua-ke.html            (chuyển hướng cũ, đã đánh dấu noindex)
 ├── assets/                     Logo, ảnh, biểu tượng
 │   └── fonts/                  Font chữ tự lưu trữ (woff2)
+├── tools/build_blhs.py         Chuyển tệp Word bình luận BLHS → dữ liệu tra cứu
 ├── styles.css                  Toàn bộ giao diện
 ├── script.js                   Menu, hiệu ứng, xử lý biểu mẫu  ← chứa CẤU HÌNH
 ├── sitemap.xml                 Sơ đồ website cho công cụ tìm kiếm
@@ -194,5 +201,70 @@ Mở trình duyệt tại <http://localhost:8000>.
 - Không có bất kỳ nội dung cam kết bảo đảm kết quả vụ việc nào
 
 ---
+
+---
+
+## 8. Chuyên mục "Bộ luật Hình sự"
+
+Trang `/bo-luat-hinh-su/` cho phép tra cứu toàn văn Bộ luật Hình sự năm 2015 (sửa đổi, bổ sung năm 2017, 2025)
+kèm bình luận khoa học từng điều.
+
+### Cập nhật khi có bản Word mới
+
+```bash
+pip install python-docx
+python3 tools/build_blhs.py "duong-dan/Binh-luan-BLHS.docx"
+```
+
+Lệnh này dựng lại toàn bộ `bo-luat-hinh-su/data/` và mục lục trong `bo-luat-hinh-su/index.html`, đồng thời
+in báo cáo kiểm tra. **Đọc kỹ báo cáo trước khi đăng**, đặc biệt các dòng:
+
+| Dòng báo cáo | Ý nghĩa |
+|---|---|
+| `CẢNH BÁO — nghi lời bình luận lọt vào văn bản điều luật` | Tiêu đề "Bình luận" của điều đó bị thiếu hoặc sai → sửa trong tệp Word |
+| `Điều không có bình luận` | Hiện chỉ Điều 292 (đã bãi bỏ) — điều khác xuất hiện ở đây là bất thường |
+| `Ký tự tổ hợp còn sót` / `Đoạn lệch độ dài` | Phải bằng 0, nếu không tìm kiếm tiếng Việt sẽ sai |
+
+Chỉ công bố văn bản điều luật, không kèm bình luận:
+
+```bash
+python3 tools/build_blhs.py "Binh-luan-BLHS.docx" --khong-binh-luan
+```
+
+### Tệp Word cần tuân theo quy ước định dạng
+
+Bộ chuyển đổi đọc cấu trúc qua **style** của tệp gốc: `PHAN BR` (Phần), `CHUONG BR` (Chương), `CENTER` bắt đầu
+bằng "Mục…" (Mục), `DIEU` (Điều), `ITALIC` (văn bản điều luật), và một dòng chỉ gồm chữ **"Bình luận"** ngăn cách
+lời luật với lời bình. Dòng "Bình luận" được nhận diện theo nội dung nên có hay không có dấu hai chấm đều được.
+
+### Các điều chỉnh đã áp dụng lên dữ liệu gốc
+
+Nội dung điều luật và bình luận **được giữ nguyên văn**. Chỉ có các điều chỉnh kỹ thuật sau:
+
+- Chuẩn hoá Unicode NFC cho 5.024 ký tự tiếng Việt đang ở dạng tổ hợp rời, để tìm kiếm chính xác.
+- **Bổ sung tiêu đề "Mục 3. Các tội phạm khác xâm phạm trật tự quản lý kinh tế"** (Chương XVIII, Điều 222–234)
+  vốn bị thiếu trong tệp gốc, theo cấu trúc chính thức của Bộ luật. Trên trang có ghi chú "bổ sung tiêu đề".
+- Nhận diện đúng văn bản điều luật ở Điều 159, 397, 405 (bị định dạng nhầm thành văn bản thường) và tiêu đề
+  "Bình luận" ở Điều 159, 359, 366 (bị định dạng nhầm).
+- Bỏ phần ghi chú thừa "(Điều 160 Bộ luật hình sự)" ở tên Điều 160 và cặp ngoặc kép bao quanh văn bản Điều 159.
+- Dấu `*` cuối tên điều được chuyển thành nhãn "Có sửa đổi, bổ sung (*)", giải thích theo chú thích số 2 của tài liệu gốc.
+
+### Liên kết chéo giữa các điều
+
+Cụm "Điều N" được tự động gắn liên kết **chỉ khi chắc chắn thuộc Bộ luật Hình sự hiện hành**. Các trường hợp không
+gắn: điều của luật khác (Bộ luật Dân sự, Tố tụng hình sự, Nghị định, Thông tư…), điều của BLHS 1985/1999, và mọi
+"Điều N" trong đoạn văn có so sánh với luật cũ mà không ghi rõ "của Bộ luật này".
+
+### Phím tắt cho người dùng
+
+| Phím | Tác dụng |
+|---|---|
+| `/` hoặc `Ctrl + K` | Chuyển tới ô tìm kiếm |
+| `[` · `]` | Điều trước · điều tiếp theo |
+| `N` · `Shift + N` | Kết quả tìm kiếm tiếp theo · trước đó |
+| `Esc` | Đóng gợi ý / kết quả / tắt tô sáng |
+
+Đường dẫn có thể chia sẻ: `…/bo-luat-hinh-su/#d173` (mở Điều 173), `…/bo-luat-hinh-su/#tim=án treo` (mở kết quả tìm).
+
 
 *Mọi nội dung pháp lý trên website cần được luật sư phụ trách rà soát lại trước khi công bố chính thức.*

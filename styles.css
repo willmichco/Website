@@ -748,3 +748,16 @@ select:focus-visible, textarea:focus-visible {
   .team-grid-single { grid-template-columns: 1fr; }
   .team-note { padding: 26px 24px; }
 }
+
+/* Menu có thêm mục "Bộ luật Hình sự": giữ mỗi mục trên một dòng ở màn hình trung bình */
+.site-nav a, .header-cta strong { white-space: nowrap; }
+@media (min-width: 1051px) and (max-width: 1280px) {
+  .header-inner { gap: 22px; }
+  .site-nav { gap: 16px; }
+  .site-nav a { font-size: 12.5px; }
+  .lang-switch { margin-left: 2px; }
+  .header-cta { padding-left: 18px; }
+  .header-cta small { display: none; }
+  .brand-mark { width: 58px; height: 58px; }
+  .brand-copy strong { font-size: 20px; }
+}
