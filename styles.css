@@ -733,3 +733,154 @@ select:focus-visible, textarea:focus-visible {
 
 /* Tiêu đề sans-serif: khoảng cách chữ chặt hơn cho cỡ lớn */
 .hero h1, h2, .page-hero h1, .detail-hero h1, .legal-hero h1, .error-main h1 { letter-spacing: -.02em; }
+
+/* =====================================================================
+   TRANG CON — PHONG CÁCH PHÁP LÝ TRANG TRỌNG
+   Hệ màu: xanh navy + vàng đồng; họa tiết: cán cân công lý, đường kẻ vàng,
+   số La Mã, ký hiệu § cho phần cam kết nghề nghiệp.
+   ===================================================================== */
+:root {
+  --gold-deep: #8d6d36;
+  --emblem: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23c9a565' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='32' cy='9' r='2.2'/%3E%3Cpath d='M32 11.5V52M12 17.5Q32 13 52 17.5M14 17.5 7 35M14 17.5 21 35M50 17.5 43 35M50 17.5 57 35M5 35h18a9 5 0 0 1-18 0ZM41 35h18a9 5 0 0 1-18 0ZM25 52h14l3 4H22Z'/%3E%3C/svg%3E");
+}
+
+/* ---------- Đầu trang & menu ---------- */
+.site-header { border-bottom-color: rgba(201,165,101,.22); }
+.header-cta .phone-icon { border-color: rgba(201,165,101,.6); color: var(--gold); }
+.site-nav { gap: clamp(14px, 1.55vw, 26px); }
+@media (min-width: 1051px) { .site-header .header-inner { width: min(calc(100% - 48px), 1320px); } }
+.site-nav > a, .nav-item > a { text-transform: uppercase; font-size: 11.5px; font-weight: 600; letter-spacing: 1.1px; }
+.site-nav a::after { height: 1px; background: var(--gold); }
+.site-nav > a.active, .nav-item > a.active { color: var(--gold-light); }
+
+.nav-item { position: relative; display: flex; align-items: center; gap: 2px; }
+.nav-sub-toggle { width: 20px; height: 20px; padding: 0; border: 0; background: none; color: rgba(255,255,255,.7); cursor: pointer; }
+.nav-sub-toggle::before { content: ""; display: block; width: 6px; height: 6px; margin: 4px auto 0;
+  border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: rotate(45deg); transition: transform .2s; }
+.nav-sub { position: absolute; top: calc(100% + 34px); left: -26px; z-index: 120; min-width: 300px; padding: 12px 0;
+  background: #06182a; border: 1px solid rgba(201,165,101,.28); border-top: 2px solid var(--gold);
+  box-shadow: 0 26px 60px rgba(0,0,0,.35); opacity: 0; visibility: hidden; transform: translateY(8px);
+  transition: opacity .2s, transform .2s, visibility .2s; }
+.nav-sub::before { content: ""; position: absolute; left: 0; right: 0; bottom: 100%; height: 36px; }
+.nav-sub a { display: block; padding: 10px 24px; border-left: 2px solid transparent; color: rgba(255,255,255,.8);
+  font-size: 13.5px; font-weight: 500; letter-spacing: .1px; white-space: nowrap; transition: background .2s, color .2s; }
+.nav-sub a::after { display: none; }
+.nav-sub a:hover, .nav-sub a[aria-current] { border-left-color: var(--gold); background: rgba(255,255,255,.04); color: var(--gold-light); }
+.nav-sub .nav-sub-all { margin-top: 8px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,.08);
+  color: var(--gold-light); font-size: 11px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; }
+.nav-item.open .nav-sub { opacity: 1; visibility: visible; transform: none; }
+.nav-item.open .nav-sub-toggle::before { transform: rotate(-135deg); margin-top: 8px; }
+@media (min-width: 1051px) {
+  .nav-item:hover .nav-sub, .nav-item:focus-within .nav-sub { opacity: 1; visibility: visible; transform: none; }
+}
+@media (min-width: 1051px) and (max-width: 1320px) {
+  .header-cta { padding-left: 16px; }
+  .header-cta span:last-child { display: none; }
+}
+@media (max-width: 1050px) {
+  .site-nav { gap: 0; padding: 8px 25px 22px; max-height: calc(100vh - 92px); overflow-y: auto; align-items: stretch; }
+  .site-nav > a, .nav-item { border-bottom: 1px solid rgba(255,255,255,.08); }
+  .site-nav > a, .nav-item > a { display: block; padding: 15px 0; font-size: 12.5px; }
+  .site-nav > a::after, .nav-item > a::after { display: none; }
+  .nav-item { flex-wrap: wrap; }
+  .nav-item > a { flex: 1; }
+  .nav-sub-toggle { width: 44px; height: 44px; }
+  .nav-sub { position: static; display: none; min-width: 0; width: 100%; margin: 0 0 14px; padding: 4px 0;
+    border: 0; border-left: 1px solid rgba(201,165,101,.45); background: none; box-shadow: none;
+    opacity: 1; visibility: visible; transform: none; }
+  .nav-item.open .nav-sub { display: block; }
+  .nav-sub a { padding: 9px 16px; white-space: normal; }
+}
+@media (max-width: 780px) { .site-nav { max-height: calc(100vh - 76px); } }
+
+/* ---------- Phần đầu trang con ---------- */
+.page-hero { padding: 176px 0 104px; text-align: center;
+  background: linear-gradient(180deg, rgba(4,15,27,.94) 0%, rgba(7,26,45,.86) 48%, rgba(5,19,33,.97) 100%),
+              url("assets/hero-law-office.webp") center 38% / cover; }
+.page-hero::before { background-image: radial-gradient(ellipse at 50% 0%, rgba(201,165,101,.16), transparent 58%); }
+.page-hero::after { inset: auto 0 0; height: 1px; opacity: 1; background-size: auto;
+  background-image: linear-gradient(90deg, transparent, rgba(201,165,101,.75), transparent); }
+.page-hero .breadcrumb { justify-content: center; margin-bottom: 34px; }
+.page-hero .eyebrow { justify-content: center; }
+.page-hero h1 { max-width: 22ch; margin-inline: auto; font-size: clamp(34px, 4.2vw, 56px); line-height: 1.18; }
+.page-hero > .container > p { max-width: 62ch; margin: 24px auto 0; }
+.hero-emblem { width: 76px; height: 76px; margin: 0 auto 26px; border: 1px solid rgba(201,165,101,.6); border-radius: 50%;
+  background: var(--emblem) center / 42px no-repeat, rgba(4,15,27,.55);
+  box-shadow: 0 0 0 7px rgba(201,165,101,.07), 0 0 0 8px rgba(201,165,101,.18); }
+.hero-rule { position: relative; width: 170px; height: 1px; margin: 30px auto 0;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent); }
+.hero-rule::after { content: ""; position: absolute; left: 50%; top: 50%; width: 7px; height: 7px;
+  background: var(--gold); transform: translate(-50%, -50%) rotate(45deg); }
+
+/* ---------- Thẻ nguyên tắc (số La Mã) ---------- */
+.pillar-grid { gap: 24px; border: 0; }
+.pillar { position: relative; padding: 40px 34px 36px; border: 1px solid var(--line); background: var(--white); }
+.pillar::before { content: ""; position: absolute; left: -1px; right: -1px; top: -1px; height: 3px; background: var(--gold);
+  transform: scaleX(0); transform-origin: left; transition: transform .35s; }
+.pillar:hover { background: var(--white); transform: translateY(-4px); box-shadow: 0 22px 50px rgba(7,26,45,.1); }
+.pillar:hover::before { transform: scaleX(1); }
+.pillar span { display: flex; align-items: center; justify-content: flex-start; gap: 14px; width: auto; height: auto; margin-bottom: 24px;
+  border: 0; border-radius: 0; color: var(--gold-deep); font-size: 15px; font-weight: 700; letter-spacing: 2px; }
+.pillar span::after { content: ""; width: 42px; height: 1px; background: rgba(201,165,101,.7); }
+.pillar h3 { font-size: 20px; line-height: 1.35; }
+
+/* ---------- Khối trích dẫn ---------- */
+.quote-band { position: relative; padding: 112px 0; overflow: hidden; color: var(--white); text-align: center;
+  background: linear-gradient(135deg, #051524, #0b2740); }
+.quote-band::before { content: ""; position: absolute; left: 50%; top: 50%; width: 460px; height: 460px;
+  transform: translate(-50%, -50%); background: var(--emblem) center / contain no-repeat; opacity: .06; pointer-events: none; }
+.quote-band figure { position: relative; max-width: 860px; margin: 0 auto; }
+.quote-band blockquote { margin: 0; }
+.quote-band blockquote::before { content: "\201C"; display: block; height: 46px; color: var(--gold); font-size: 96px; line-height: 1; }
+.quote-band blockquote p { margin: 0; font-size: clamp(26px, 3vw, 38px); font-weight: 500; line-height: 1.45; letter-spacing: -.01em; }
+.quote-band figcaption { display: inline-flex; align-items: center; gap: 14px; margin-top: 32px; color: var(--gold-light);
+  font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; }
+.quote-band figcaption::before, .quote-band figcaption::after { content: ""; width: 38px; height: 1px; background: currentColor; }
+
+/* ---------- Đội ngũ ---------- */
+.lawyer-card { border-top-color: var(--gold); }
+.lawyer-role { color: var(--gold-deep); }
+.lawyer-tags li { background: var(--cream); color: var(--navy); border: 1px solid rgba(201,165,101,.35); }
+.lawyer-card.has-portrait { padding-top: 0; overflow: hidden; }
+.lawyer-card.has-portrait .lawyer-photo { width: calc(100% + 60px); height: 330px; margin: 0 -30px 26px; border-radius: 0; background: var(--navy); }
+.lawyer-card.has-portrait .lawyer-photo img { object-position: 50% 18%; }
+
+/* ---------- Cam kết nghề nghiệp (dạng văn bản quy tắc) ---------- */
+.charter { position: relative; counter-reset: charter; max-width: 900px; margin: 0 auto; padding: 16px 56px 44px;
+  border: 1px solid var(--line); background: var(--white); box-shadow: 0 24px 60px rgba(7,26,45,.07); }
+.charter::before { content: ""; position: absolute; left: -1px; right: -1px; top: -1px; height: 3px; background: var(--gold); }
+.charter h3 { counter-increment: charter; display: flex; align-items: baseline; gap: 18px; margin: 34px 0 12px; font-size: 21px; }
+.charter h3::before { content: "§ " counter(charter); flex: 0 0 44px; color: var(--gold-deep); font-size: 15px; font-weight: 700; letter-spacing: 1px; }
+.charter p { margin: 0 0 0 62px; padding-bottom: 30px; border-bottom: 1px solid var(--line); }
+.charter p:last-child { padding-bottom: 0; border-bottom: 0; }
+@media (max-width: 680px) {
+  .charter { padding: 6px 22px 30px; }
+  .charter h3 { gap: 12px; }
+  .charter h3::before { flex-basis: 34px; }
+  .charter p { margin-left: 0; }
+}
+
+/* ---------- Khối kêu gọi liên hệ cuối trang ---------- */
+.service-cta-box { position: relative; overflow: hidden; padding: 58px 60px; border: 0; color: var(--white);
+  background: linear-gradient(135deg, #061624, #0c2941); box-shadow: 0 26px 60px rgba(7,26,45,.22); }
+.service-cta-box::before { content: ""; position: absolute; inset: 12px; border: 1px solid rgba(201,165,101,.32); pointer-events: none; }
+.service-cta-box::after { content: ""; position: absolute; right: -40px; top: 50%; width: 300px; height: 300px;
+  transform: translateY(-50%); background: var(--emblem) center / contain no-repeat; opacity: .07; pointer-events: none; }
+.service-cta-box > * { position: relative; z-index: 1; }
+.service-cta-box .btn { flex: 0 0 auto; white-space: nowrap; }
+.service-cta-box h2 { color: var(--white); }
+.service-cta-box p { color: rgba(255,255,255,.72); }
+.service-cta-box .eyebrow { color: var(--gold-light); }
+.service-cta-box .arrow-link { color: var(--gold-light); border-bottom-color: rgba(201,165,101,.55); }
+.service-cta-box .arrow-link:hover { color: var(--white); }
+@media (max-width: 780px) { .service-cta-box { padding: 42px 30px; } }
+
+/* ---------- Trang Liên hệ ---------- */
+.contact-info-list .ci-icon { border: 1px solid rgba(201,165,101,.45); background: var(--cream); color: var(--gold-deep); }
+.contact-info-list a strong:hover { color: var(--gold-deep); }
+.map-actions a { border-color: var(--navy); color: var(--navy); }
+.map-actions a:hover { background: var(--navy); color: var(--gold-light); }
+.faq-item summary:hover { color: var(--gold-deep); }
+.faq-item summary::after { border-color: var(--gold); color: var(--gold-deep); }
+.faq-item[open] summary::after { border-color: var(--navy); background: var(--navy); color: var(--gold-light); }
+.faq-item .faq-answer a { color: var(--gold-deep); }

@@ -3,15 +3,17 @@
    Dùng lại hệ màu, font của website (styles.css); mọi lớp mang tiền tố lx-
    ===================================================================== */
 .lx-page { --lx-fs: 16px; --lx-law-bg: #fbf9f4; --lx-law-line: #eadfca; --lx-hit: #ffe58a; --lx-hit-cur: #ffb74d; background: #fff; }
-.lx-page .site-nav a[aria-current="page"] { color: var(--white); }
+.lx-page .site-nav a[aria-current="page"] { color: var(--gold-light); }
 .lx-page .site-nav a[aria-current="page"]::after { right: 0; }
 
 /* ---------- Đầu trang ---------- */
 .lx-hero { position: relative; padding: calc(var(--hdr, 92px) + 34px) 0 30px; color: var(--white); overflow: hidden;
-  background: linear-gradient(135deg, #04111e 0%, #071a2d 55%, #0b2942 100%); }
+  background: linear-gradient(135deg, rgba(4,15,27,.95) 0%, rgba(7,26,45,.9) 55%, rgba(11,41,66,.94) 100%),
+              url("../assets/hero-law-office.webp") center 38% / cover; }
 .lx-hero::before { content: ""; position: absolute; inset: 0; pointer-events: none;
-  background: radial-gradient(circle at 84% 12%, rgba(21,133,208,.22), transparent 36%),
-              radial-gradient(circle at 8% 90%, rgba(201,165,101,.12), transparent 40%); }
+  background: radial-gradient(circle at 84% 12%, rgba(201,165,101,.16), transparent 38%); }
+.lx-hero::after { content: ""; position: absolute; inset: auto 0 0; height: 1px; pointer-events: none;
+  background: linear-gradient(90deg, transparent, rgba(201,165,101,.75), transparent); }
 .lx-hero > .container { position: relative; }
 .lx-hero .breadcrumb { margin-bottom: 18px; }
 .lx-hero-grid { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 28px 48px; align-items: end; }
@@ -26,7 +28,7 @@
 .lx-try { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 22px; font-size: 12.5px; color: rgba(255,255,255,.62); }
 .lx-try button { padding: 6px 12px; border: 1px solid rgba(255,255,255,.22); border-radius: 999px; background: rgba(255,255,255,.06);
   color: #fff; font-size: 12.5px; cursor: pointer; transition: background .2s, border-color .2s; }
-.lx-try button:hover { background: rgba(21,133,208,.35); border-color: var(--brand-blue); }
+.lx-try button:hover { background: rgba(201,165,101,.22); border-color: var(--gold); }
 .lx-notice { margin: 18px 0 0; max-width: 100ch; color: rgba(255,255,255,.5); font-size: 11.5px; line-height: 1.7; }
 .lx-notice a { color: var(--gold-light); border-bottom: 1px solid rgba(230,204,153,.4); }
 
