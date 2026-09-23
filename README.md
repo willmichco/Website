@@ -11,12 +11,13 @@ Chỉ cần tải toàn bộ thư mục lên bất kỳ dịch vụ lưu trữ n
 
 ### ✅ Việc 1 — Đổi tên miền trong mã nguồn
 
-Toàn bộ mã đang dùng tên miền tạm `https://luatsunam.vn`. Khi có tên miền thật, chạy một lệnh duy nhất
-tại thư mục gốc của dự án (thay `tenmiencuaban.vn` bằng tên miền thật):
+Website đang chạy trên GitHub Pages tại `https://willmichco.github.io/Website/`; mọi `canonical`,
+`og:url`, `sitemap.xml` đều dùng địa chỉ này. Khi mua tên miền riêng, chạy lệnh sau tại thư mục gốc
+(thay `tenmiencuaban.vn` bằng tên miền thật), rồi sửa tiền tố `/Website/` trong `404.html` thành `/`:
 
 ```bash
-grep -rl "luatsunam.vn" . --include="*.html" --include="*.xml" --include="*.txt" \
-  | xargs sed -i 's|https://luatsunam\.vn|https://tenmiencuaban.vn|g'
+grep -rl "willmichco.github.io/Website" . --include="*.html" --include="*.xml" --include="*.txt" \
+  | xargs sed -i 's|https://willmichco\.github\.io/Website|https://tenmiencuaban.vn|g'
 ```
 
 > **Vì sao quan trọng:** các thẻ `canonical`, `sitemap.xml` và `og:image` đều dùng đường dẫn tuyệt đối.
@@ -101,8 +102,9 @@ Mọi chỗ cần điền đều được đánh dấu bằng `[dấu ngoặc vu
 ### Quy ước đường dẫn (bắt buộc giữ thống nhất)
 
 - Mỗi trang là **một thư mục chứa `index.html`**; địa chỉ công khai luôn có **dấu `/` ở cuối**:
-  `https://luatsunam.vn/dich-vu/hinh-su/` — không dùng `.html`, không dùng `index.html` trong liên kết.
-- Liên kết nội bộ viết **tuyệt đối từ gốc**: `href="/lien-he/"`, `src="/assets/logo.webp"`.
+  `…/dich-vu/hinh-su/` — không dùng `.html`, không dùng `index.html` trong liên kết.
+- Liên kết nội bộ viết **tương đối** (`href="../lien-he/"`, `src="../assets/logo.webp"`) để chạy được cả
+  dưới thư mục con `/Website/` của GitHub Pages lẫn tên miền riêng. Riêng `404.html` dùng tiền tố `/Website/`.
 - Đường dẫn chỉ gồm chữ thường không dấu, nối bằng gạch ngang; trang dịch vụ luôn nằm dưới `/dich-vu/`.
 - `canonical`, `og:url`, `BreadcrumbList` và `sitemap.xml` phải dùng đúng địa chỉ đó.
 - Thêm trang mới: tạo thư mục mới, sao chép một trang cùng loại, sửa tiêu đề/mô tả/canonical,
