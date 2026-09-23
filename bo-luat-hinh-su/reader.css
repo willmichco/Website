@@ -15,13 +15,13 @@
 .lx-hero > .container { position: relative; }
 .lx-hero .breadcrumb { margin-bottom: 18px; }
 .lx-hero-grid { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 28px 48px; align-items: end; }
-.lx-hero h1 { margin: 0; font-family: var(--serif); font-weight: 400; font-size: clamp(34px, 4.2vw, 54px); line-height: 1.15; }
-.lx-hero h1 em { color: var(--gold); font-style: italic; }
+.lx-hero h1 { margin: 0; font-family: var(--serif); font-weight: 600; font-size: clamp(34px, 4.2vw, 54px); line-height: 1.15; }
+.lx-hero h1 em { color: var(--gold); font-style: normal; }
 .lx-sub { margin: 10px 0 0; max-width: 62ch; color: rgba(255,255,255,.78); font-size: 15.5px; line-height: 1.7; }
 .lx-by { margin: 8px 0 0; color: var(--gold-light); font-size: 13px; letter-spacing: .2px; }
 .lx-stats { display: flex; gap: 26px; margin: 0; padding: 0; list-style: none; }
 .lx-stats li { display: flex; flex-direction: column; align-items: flex-end; }
-.lx-stats b { font-family: var(--serif); font-size: 30px; font-weight: 500; color: var(--gold-light); line-height: 1.1; }
+.lx-stats b { font-family: var(--serif); font-size: 30px; font-weight: 600; color: var(--gold-light); line-height: 1.1; }
 .lx-stats span { color: rgba(255,255,255,.62); font-size: 11px; letter-spacing: .6px; text-transform: uppercase; white-space: nowrap; }
 .lx-try { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 22px; font-size: 12.5px; color: rgba(255,255,255,.62); }
 .lx-try button { padding: 6px 12px; border: 1px solid rgba(255,255,255,.22); border-radius: 999px; background: rgba(255,255,255,.06);
@@ -122,7 +122,7 @@
 .lx-part span { display: block; margin-bottom: 4px; color: var(--gold-light); font: 700 11px/1.3 var(--sans); letter-spacing: 1.4px; text-transform: uppercase; }
 .lx-ch-h { margin: 44px 0 6px; padding: 0 0 18px; border-bottom: 2px solid var(--navy); scroll-margin-top: calc(var(--hdr, 92px) + var(--bar, 66px) + 12px); }
 .lx-ch-h .k { color: var(--brand-blue-deep); font: 700 12px/1.3 var(--sans); letter-spacing: 1.4px; text-transform: uppercase; }
-.lx-ch-h h2 { margin: 6px 0 6px; color: var(--navy); font-family: var(--serif); font-size: 1.75em; font-weight: 500; line-height: 1.3; letter-spacing: 0; }
+.lx-ch-h h2 { margin: 6px 0 6px; color: var(--navy); font-family: var(--serif); font-size: 1.75em; font-weight: 600; line-height: 1.3; letter-spacing: 0; }
 .lx-ch-h .r { color: var(--muted); font-size: 13px; }
 .lx-muc { margin: 34px 0 6px; padding: 11px 16px; border-radius: 10px; background: var(--brand-blue-soft); color: var(--brand-blue-deep);
   font-family: var(--serif); font-size: 1.05em; font-weight: 600; line-height: 1.45; }
@@ -136,7 +136,7 @@
 .lx-art { padding: 34px 0 30px; border-bottom: 1px solid #e9edf1; scroll-margin-top: calc(var(--hdr, 92px) + var(--bar, 66px) + 12px); }
 .lx-ah { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 4px 18px; margin-bottom: 18px; }
 .lx-ah .n { color: var(--brand-blue-deep); font: 700 .74em/1.3 var(--sans); letter-spacing: 1.4px; text-transform: uppercase; }
-.lx-ah h3 { grid-column: 1; margin: 0; color: var(--navy); font-family: var(--serif); font-size: 1.42em; font-weight: 500; line-height: 1.4; }
+.lx-ah h3 { grid-column: 1; margin: 0; color: var(--navy); font-family: var(--serif); font-size: 1.42em; font-weight: 600; line-height: 1.4; }
 .lx-bs { grid-column: 1; display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
 .lx-b { padding: 3px 9px; border-radius: 999px; font: 600 11px/1.5 var(--sans); }
 .lx-b.am { background: var(--brand-blue-soft); color: var(--brand-blue-deep); cursor: help; }
@@ -357,7 +357,7 @@ mark.lx-hl { background: var(--lx-hit); color: inherit; }
   .lx-seg .s { display: inline; }
   .lx-tocx { position: sticky; top: -18px; z-index: 2; display: flex; align-items: center; justify-content: space-between;
     margin: -18px -14px 10px; padding: 14px 14px 10px; background: #fff; border-bottom: 1px solid var(--line); }
-  .lx-tocx b { color: var(--navy); font-family: var(--serif); font-size: 18px; font-weight: 500; }
+  .lx-tocx b { color: var(--navy); font-family: var(--serif); font-size: 18px; font-weight: 600; }
   .lx-tocx button { width: 36px; height: 36px; border: 1px solid var(--line); border-radius: 50%; background: #fff; color: var(--navy);
     font-size: 20px; line-height: 1; cursor: pointer; }
 }
