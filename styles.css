@@ -761,3 +761,13 @@ select:focus-visible, textarea:focus-visible {
   .brand-mark { width: 58px; height: 58px; }
   .brand-copy strong { font-size: 20px; }
 }
+
+/* Liên kết "xem thêm" dưới các khối tóm tắt ở trang chủ */
+.section-more { margin: 44px 0 0; text-align: center; }
+.values-copy .hero-actions { flex-wrap: wrap; gap: 18px 32px; }
+
+/* Lưới 2 cột cho trang Quy trình làm việc */
+.pillar-grid.two-col { grid-template-columns: repeat(2, 1fr); }
+@media (max-width: 980px) {
+  .pillar-grid.two-col { grid-template-columns: 1fr; }
+}

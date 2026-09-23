@@ -1,0 +1,15 @@
+# Chuyển hướng 301 từ địa chỉ cũ (.html) sang địa chỉ mới — Netlify / Cloudflare Pages
+/chinh-sach-bao-mat.html                         /chinh-sach-bao-mat/                         301
+/dich-vu/cong-chung.html                         /dich-vu/cong-chung/                         301
+/dich-vu/dan-su.html                             /dich-vu/dan-su/                             301
+/dich-vu/dat-dai-bat-dong-san.html               /dich-vu/dat-dai-bat-dong-san/               301
+/dich-vu/hinh-su.html                            /dich-vu/hinh-su/                            301
+/dich-vu/hon-nhan-gia-dinh.html                  /dich-vu/hon-nhan-gia-dinh/                  301
+/dich-vu/lao-dong-viec-lam.html                  /dich-vu/lao-dong-viec-lam/                  301
+/dich-vu/thua-ke.html                            /dich-vu/thua-ke/                            301
+/dich-vu/tranh-tung-giai-quyet-tranh-chap.html   /dich-vu/tranh-tung-giai-quyet-tranh-chap/   301
+/dich-vu/tu-van-thua-ke.html                     /dich-vu/thua-ke/                            301
+/dieu-khoan-su-dung.html                         /dieu-khoan-su-dung/                         301
+/gioi-thieu.html                                 /gioi-thieu/                                 301
+/lien-he.html                                    /lien-he/                                    301
+/mien-tru-trach-nhiem.html                       /mien-tru-trach-nhiem/                       301

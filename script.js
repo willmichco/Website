@@ -48,10 +48,11 @@ const sections = [...document.querySelectorAll('main section[id]')];
 const sectionObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (!entry.isIntersecting) return;
+    // Chỉ áp dụng cho liên kết neo trong trang (bản tiếng Anh); các trang riêng đã đánh dấu sẵn trong HTML.
     navLinks.forEach((link) => {
       const href = link.getAttribute('href') || '';
-      const hash = href.slice(href.indexOf('#'));
-      link.classList.toggle('active', href.includes('#') && hash === `#${entry.target.id}`);
+      if (!href.startsWith('#')) return;
+      link.classList.toggle('active', href === `#${entry.target.id}`);
     });
   });
 }, { rootMargin: '-40% 0px -50% 0px' });

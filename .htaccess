@@ -1,0 +1,18 @@
+# Máy chủ Apache (cPanel, hosting Việt Nam)
+ErrorDocument 404 /404.html
+
+# Chuyển hướng 301 từ địa chỉ cũ (.html) sang địa chỉ mới
+RedirectMatch 301 ^/chinh-sach-bao-mat\.html$ /chinh-sach-bao-mat/
+RedirectMatch 301 ^/dich-vu/cong-chung\.html$ /dich-vu/cong-chung/
+RedirectMatch 301 ^/dich-vu/dan-su\.html$ /dich-vu/dan-su/
+RedirectMatch 301 ^/dich-vu/dat-dai-bat-dong-san\.html$ /dich-vu/dat-dai-bat-dong-san/
+RedirectMatch 301 ^/dich-vu/hinh-su\.html$ /dich-vu/hinh-su/
+RedirectMatch 301 ^/dich-vu/hon-nhan-gia-dinh\.html$ /dich-vu/hon-nhan-gia-dinh/
+RedirectMatch 301 ^/dich-vu/lao-dong-viec-lam\.html$ /dich-vu/lao-dong-viec-lam/
+RedirectMatch 301 ^/dich-vu/thua-ke\.html$ /dich-vu/thua-ke/
+RedirectMatch 301 ^/dich-vu/tranh-tung-giai-quyet-tranh-chap\.html$ /dich-vu/tranh-tung-giai-quyet-tranh-chap/
+RedirectMatch 301 ^/dich-vu/tu-van-thua-ke\.html$ /dich-vu/thua-ke/
+RedirectMatch 301 ^/dieu-khoan-su-dung\.html$ /dieu-khoan-su-dung/
+RedirectMatch 301 ^/gioi-thieu\.html$ /gioi-thieu/
+RedirectMatch 301 ^/lien-he\.html$ /lien-he/
+RedirectMatch 301 ^/mien-tru-trach-nhiem\.html$ /mien-tru-trach-nhiem/
