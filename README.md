@@ -44,8 +44,8 @@ Mọi chỗ cần điền đều được đánh dấu bằng `[dấu ngoặc vu
 
 | Tệp | Cần bổ sung |
 |---|---|
-| `gioi-thieu.html` | Họ tên đầy đủ, **số Thẻ luật sư**, **Đoàn Luật sư**, năm hành nghề của từng luật sư |
-| `mien-tru-trach-nhiem.html` | **Mã số doanh nghiệp**, **số Giấy đăng ký hoạt động** do Sở Tư pháp cấp |
+| `gioi-thieu/index.html` | Họ tên đầy đủ, **số Thẻ luật sư**, **Đoàn Luật sư**, năm hành nghề của từng luật sư |
+| `mien-tru-trach-nhiem/index.html` | **Mã số doanh nghiệp**, **số Giấy đăng ký hoạt động** do Sở Tư pháp cấp |
 
 > ⚖️ **Lưu ý nghề nghiệp:** chỉ công bố thông tin chính xác và đã được từng luật sư đồng ý.
 > Thông tin giới thiệu dịch vụ pháp lý phải trung thực, không gây hiểu nhầm, không so sánh hạ thấp tổ chức
@@ -69,39 +69,45 @@ Mọi chỗ cần điền đều được đánh dấu bằng `[dấu ngoặc vu
 ## 3. Cấu trúc dự án
 
 ```
-├── index.html                  Trang chủ
-├── gioi-thieu.html             Giới thiệu & Đội ngũ luật sư
-├── lien-he.html                Liên hệ + bản đồ + câu hỏi thường gặp
-├── mien-tru-trach-nhiem.html   Tuyên bố miễn trừ trách nhiệm
-├── chinh-sach-bao-mat.html     Chính sách bảo mật
-├── dieu-khoan-su-dung.html     Điều khoản sử dụng
-├── 404.html                    Trang báo lỗi không tìm thấy
-├── en/index.html               Bản tiếng Anh
-├── bo-luat-hinh-su/            Tra cứu Bộ luật Hình sự & bình luận (xem mục 8)
-│   ├── index.html              Trang tra cứu
-│   ├── reader.js / reader.css  Trình đọc, mục lục, kết quả tìm kiếm
-│   ├── lx-core.js              Lõi so khớp tiếng Việt (dùng chung)
-│   ├── search-worker.js        Tìm kiếm toàn văn chạy nền
-│   └── data/                   Dữ liệu sinh tự động từ tệp Word — không sửa tay
-├── dich-vu/                    8 trang lĩnh vực hoạt động
-│   ├── tu-van-thua-ke.html                 Thừa kế
-│   ├── tranh-tung-giai-quyet-tranh-chap.html
-│   ├── hon-nhan-gia-dinh.html
-│   ├── dat-dai-bat-dong-san.html
-│   ├── lao-dong-viec-lam.html
-│   ├── hinh-su.html
-│   ├── dan-su.html
-│   ├── cong-chung.html
-│   └── thua-ke.html            (chuyển hướng cũ, đã đánh dấu noindex)
-├── assets/                     Logo, ảnh, biểu tượng
-│   └── fonts/                  Font chữ tự lưu trữ (woff2)
-├── tools/build_blhs.py         Chuyển tệp Word bình luận BLHS → dữ liệu tra cứu
-├── styles.css                  Toàn bộ giao diện
-├── script.js                   Menu, hiệu ứng, xử lý biểu mẫu  ← chứa CẤU HÌNH
-├── sitemap.xml                 Sơ đồ website cho công cụ tìm kiếm
-├── robots.txt
-└── site.webmanifest            Cho phép lưu website ra màn hình chính điện thoại
+├── index.html                      Trang chủ (tóm tắt, dẫn sang các trang chuyên đề)
+├── gioi-thieu/                     /gioi-thieu/              Giới thiệu & Đội ngũ luật sư
+├── dich-vu/                        /dich-vu/                 Tổng quan 8 lĩnh vực
+│   ├── thua-ke/                    /dich-vu/thua-ke/
+│   ├── tranh-tung-giai-quyet-tranh-chap/
+│   ├── hon-nhan-gia-dinh/
+│   ├── dat-dai-bat-dong-san/
+│   ├── lao-dong-viec-lam/
+│   ├── hinh-su/
+│   ├── dan-su/
+│   ├── cong-chung/
+│   └── *.html                      (địa chỉ cũ — tự chuyển hướng, noindex)
+├── vi-sao-chon-chung-toi/          /vi-sao-chon-chung-toi/   Nguyên tắc & cam kết đồng hành
+├── quy-trinh-lam-viec/             /quy-trinh-lam-viec/      Quy trình 4 bước, hồ sơ cần chuẩn bị
+├── lien-he/                        /lien-he/                 Liên hệ + bản đồ + câu hỏi thường gặp
+├── bo-luat-hinh-su/                /bo-luat-hinh-su/         Tra cứu BLHS & bình luận (xem mục 8)
+│   ├── index.html · reader.js · reader.css · lx-core.js · search-worker.js
+│   └── data/                       Dữ liệu sinh tự động từ tệp Word — không sửa tay
+├── chinh-sach-bao-mat/ · dieu-khoan-su-dung/ · mien-tru-trach-nhiem/
+├── 404.html                        Trang báo lỗi (dùng đường dẫn tuyệt đối từ gốc)
+├── *.html ở thư mục gốc            (địa chỉ cũ — tự chuyển hướng, noindex)
+├── _redirects                      Chuyển hướng 301 cho Netlify / Cloudflare Pages
+├── .htaccess                       Chuyển hướng 301 + trang 404 cho máy chủ Apache/cPanel
+├── assets/                         Logo, ảnh, biểu tượng, font chữ (woff2)
+├── tools/build_blhs.py             Chuyển tệp Word bình luận BLHS → dữ liệu tra cứu
+├── styles.css · script.js          Giao diện · menu, hiệu ứng, biểu mẫu (← chứa CẤU HÌNH)
+├── sitemap.xml · robots.txt · site.webmanifest
 ```
+
+### Quy ước đường dẫn (bắt buộc giữ thống nhất)
+
+- Mỗi trang là **một thư mục chứa `index.html`**; địa chỉ công khai luôn có **dấu `/` ở cuối**:
+  `https://luatsunam.vn/dich-vu/hinh-su/` — không dùng `.html`, không dùng `index.html` trong liên kết.
+- Liên kết nội bộ viết **tuyệt đối từ gốc**: `href="/lien-he/"`, `src="/assets/logo.webp"`.
+- Đường dẫn chỉ gồm chữ thường không dấu, nối bằng gạch ngang; trang dịch vụ luôn nằm dưới `/dich-vu/`.
+- `canonical`, `og:url`, `BreadcrumbList` và `sitemap.xml` phải dùng đúng địa chỉ đó.
+- Thêm trang mới: tạo thư mục mới, sao chép một trang cùng loại, sửa tiêu đề/mô tả/canonical,
+  thêm vào menu (`site-nav`), chân trang và `sitemap.xml`.
+- Đổi địa chỉ một trang đã có: giữ trang cũ dạng chuyển hướng và thêm một dòng vào `_redirects`, `.htaccess`.
 
 ---
 
@@ -113,8 +119,8 @@ Mọi chỗ cần điền đều được đánh dấu bằng `[dấu ngoặc vu
 | Email | tất cả tệp `.html` + `script.js` | `luatsunam.hcm@gmail.com` |
 | Địa chỉ văn phòng | tất cả tệp `.html` | `Vũ Ngọc Phan` |
 | Giờ làm việc | tất cả tệp `.html` | `08:00 — 17:30` |
-| Hồ sơ luật sư | `gioi-thieu.html` | `lawyer-card` |
-| Câu hỏi thường gặp | `lien-he.html` | `faq-item` |
+| Hồ sơ luật sư | `gioi-thieu/index.html` | `lawyer-card` |
+| Câu hỏi thường gặp | `lien-he/index.html` | `faq-item` |
 | Màu sắc giao diện | `styles.css` | `:root` |
 | Font chữ | `styles.css` | `--serif` / `--sans` trong `:root` |
 
@@ -142,11 +148,12 @@ Kéo thả cả thư mục vào trang chủ dịch vụ, hoặc kết nối tr�
 Không cần cấu hình build. Cả ba đều tự dùng `404.html` và cấp chứng chỉ HTTPS miễn phí.
 
 ### Máy chủ chia sẻ (cPanel, hosting Việt Nam)
-Tải toàn bộ thư mục vào `public_html/`. Để trang 404 hoạt động, tạo tệp `.htaccess` ở thư mục gốc:
+Tải toàn bộ thư mục vào `public_html/` (kể cả tệp ẩn `.htaccess` — đã có sẵn cấu hình trang 404
+và chuyển hướng 301 từ địa chỉ cũ).
 
-```apache
-ErrorDocument 404 /404.html
-```
+> Chuyển hướng từ địa chỉ `.html` cũ: Netlify/Cloudflare Pages đọc `_redirects`, Apache đọc `.htaccess`;
+> GitHub Pages và Vercel dùng các trang chuyển hướng `*.html` còn giữ lại. Giữ các trang này ít nhất
+> 12 tháng để Google cập nhật xong chỉ mục.
 
 ---
 
@@ -166,7 +173,7 @@ Mở trình duyệt tại <http://localhost:8000>.
 ## 7. Những gì đã được xây dựng sẵn
 
 **Tối ưu công cụ tìm kiếm**
-- Thẻ `canonical`, `description`, `hreflang` riêng cho từng trang
+- Thẻ `canonical`, `description` riêng cho từng trang (website chỉ có bản tiếng Việt)
 - Dữ liệu có cấu trúc: `LegalService`, `Service`, `BreadcrumbList`, `FAQPage`, `AboutPage`, `ContactPage`
 - `sitemap.xml` (15 đường dẫn), `robots.txt`
 - Thẻ Open Graph + Twitter Card kèm ảnh chia sẻ riêng (`assets/og-image.jpg`)

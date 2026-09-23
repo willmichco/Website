@@ -1,9 +1,8 @@
 /* =====================================================================
    FONT CHỮ TỰ LƯU TRỮ — hỗ trợ đầy đủ dấu tiếng Việt
    ---------------------------------------------------------------------
-   Be Vietnam Pro : font thiết kế riêng cho tiếng Việt, dùng cho phần thân
-   Lora           : serif trang trọng, dùng cho tiêu đề
-   Cả hai theo giấy phép SIL Open Font License 1.1.
+   Be Vietnam Pro : sans-serif hiện đại, thiết kế cho tiếng Việt — dùng cho cả tiêu đề và nội dung
+   Giấy phép SIL Open Font License 1.1.
    Lưu tại máy chủ của website -> không gửi yêu cầu nào tới bên thứ ba.
    ===================================================================== */
 
@@ -71,38 +70,6 @@
   src: url('assets/fonts/be-vietnam-pro-700-normal-latin.woff2') format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
-@font-face {
-  font-family: 'Lora';
-  font-style: italic;
-  font-weight: 400 700;
-  font-display: swap;
-  src: url('assets/fonts/lora-400-700-italic-vietnamese.woff2') format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
-}
-@font-face {
-  font-family: 'Lora';
-  font-style: italic;
-  font-weight: 400 700;
-  font-display: swap;
-  src: url('assets/fonts/lora-400-700-italic-latin.woff2') format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-@font-face {
-  font-family: 'Lora';
-  font-style: normal;
-  font-weight: 400 700;
-  font-display: swap;
-  src: url('assets/fonts/lora-400-700-normal-vietnamese.woff2') format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
-}
-@font-face {
-  font-family: 'Lora';
-  font-style: normal;
-  font-weight: 400 700;
-  font-display: swap;
-  src: url('assets/fonts/lora-400-700-normal-latin.woff2') format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
 
 :root {
   --navy: #071a2d;
@@ -120,7 +87,7 @@
   --brand-blue-soft: #e8f3fb;
   --brand-green: #7cb342;
   --container: 1180px;
-  --serif: 'Lora', 'Times New Roman', Times, serif;
+  --serif: var(--sans); /* Tiêu đề dùng chung phông sans-serif Be Vietnam Pro */
   --sans: 'Be Vietnam Pro', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
 }
 
@@ -170,9 +137,9 @@ p, li { text-wrap: pretty; }
 .eyebrow { display: flex; align-items: center; gap: 12px; margin-bottom: 23px; color: #85714f; font-size: 11px; font-weight: 700; letter-spacing: 1.4px; line-height: 1.5; }
 .eyebrow > span { width: 38px; height: 1px; background: currentColor; }
 .eyebrow.light { color: var(--gold-light); }
-.hero h1, h2 { margin: 0; font-family: var(--serif); font-weight: 400; line-height: 1.22; }
+.hero h1, h2 { margin: 0; font-family: var(--serif); font-weight: 600; line-height: 1.22; }
 .hero h1 { font-size: clamp(46px, 4.4vw, 68px); letter-spacing: -.2px; }
-h1 em, h2 em { color: var(--gold); font-weight: 400; }
+h1 em, h2 em { color: var(--gold); font-style: normal; }
 .hero-copy > p { max-width: 590px; margin: 26px 0 36px; color: rgba(255,255,255,.76); font-size: 17px; line-height: 1.75; }
 .hero-portrait { position: relative; width: 100%; margin: 0; }
 .hero-portrait::before { content: ""; position: absolute; inset: 17px -17px 58px 17px; border: 1px solid rgba(201,165,101,.5); pointer-events: none; }
@@ -197,7 +164,7 @@ h1 em, h2 em { color: var(--gold); font-weight: 400; }
 .trust-grid > div { display: flex; align-items: center; justify-content: center; gap: 16px; padding: 24px 32px; border-right: 1px solid rgba(255,255,255,.13); text-align: center; }
 .trust-grid > div:first-child { padding-left: 32px; }
 .trust-grid > div:last-child { border-right: 0; }
-.trust-grid strong { color: var(--gold-light); font-family: var(--serif); font-size: clamp(24px, 2.6vw, 33px); font-weight: 400; line-height: 1.2; }
+.trust-grid strong { color: var(--gold-light); font-family: var(--serif); font-size: clamp(24px, 2.6vw, 33px); font-weight: 600; line-height: 1.2; }
 .trust-grid span { color: rgba(255,255,255,.65); font-size: 10px; line-height: 1.5; letter-spacing: .5px; text-transform: uppercase; }
 .trust-grid .trust-note { border-right: 0; }
 .trust-note .shield { width: 38px; height: 42px; display: grid; place-content: center; border: 1px solid var(--gold); color: var(--gold); clip-path: polygon(50% 0, 100% 18%, 90% 78%, 50% 100%, 10% 78%, 0 18%); }
@@ -225,7 +192,7 @@ h2 { color: var(--navy); font-size: clamp(34px, 3.4vw, 50px); line-height: 1.24;
 .service-card:hover .service-number { color: rgba(255,255,255,.38); }
 .service-icon { width: 51px; height: 51px; margin-bottom: 28px; color: var(--gold); }
 .service-icon svg { width: 100%; height: 100%; fill: none; stroke: currentColor; stroke-width: 1.25; stroke-linecap: round; stroke-linejoin: round; }
-.service-card h3 { max-width: 270px; min-height: 84px; margin: 0 0 14px; color: var(--navy); font-family: var(--serif); font-size: 22px; line-height: 1.28; font-weight: 400; transition: color .3s; }
+.service-card h3 { max-width: 270px; min-height: 84px; margin: 0 0 14px; color: var(--navy); font-family: var(--serif); font-size: 22px; line-height: 1.28; font-weight: 600; transition: color .3s; }
 .service-card:hover h3 { color: var(--white); }
 .service-card p { margin: 0 0 24px; color: var(--muted); font-size: 13px; line-height: 1.75; }
 .service-card:hover p { color: rgba(255,255,255,.66); }
@@ -238,7 +205,7 @@ h2 { color: var(--navy); font-size: clamp(34px, 3.4vw, 50px); line-height: 1.24;
 .detail-hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, .55fr); gap: 70px; align-items: end; }
 .detail-hero-grid > *, .detail-layout > *, .detail-list > *, .detail-columns > * { min-width: 0; }
 .back-link { display: inline-flex; align-items: center; gap: 9px; margin-bottom: 28px; color: var(--gold-light); text-transform: uppercase; font-size: 10px; font-weight: 800; letter-spacing: 1.3px; }
-.detail-hero h1 { margin: 0; max-width: 760px; font-family: var(--serif); font-size: clamp(44px, 5vw, 70px); font-weight: 400; line-height: 1.16; letter-spacing: -.2px; }
+.detail-hero h1 { margin: 0; max-width: 760px; font-family: var(--serif); font-size: clamp(44px, 5vw, 70px); font-weight: 600; line-height: 1.16; letter-spacing: -.2px; }
 .detail-hero p { max-width: 670px; margin: 26px 0 34px; color: rgba(255,255,255,.72); font-size: 16px; line-height: 1.78; }
 .detail-card { padding: 34px; border: 1px solid rgba(201,165,101,.42); background: rgba(4,17,30,.52); backdrop-filter: blur(10px); }
 .detail-card > span { color: var(--gold-light); font-family: var(--serif); font-size: 40px; }
@@ -263,7 +230,7 @@ h2 { color: var(--navy); font-size: clamp(34px, 3.4vw, 50px); line-height: 1.24;
 .detail-list span { width: auto; height: auto; display: inline-flex; align-items: center; justify-content: flex-start; gap: 8px; margin-bottom: 20px; border: 0; border-radius: 0; color: #85714f; font-family: var(--sans); font-size: 9.5px; font-weight: 800; letter-spacing: 1.25px; }
 .detail-list span::before { content: "HẠNG MỤC"; color: var(--muted); font-size: 8.5px; letter-spacing: 1.25px; }
 .detail-list span::after { content: ""; width: 28px; height: 1px; margin-left: 2px; background: rgba(201,165,101,.6); }
-.detail-list h3 { min-height: 58px; margin: 0 0 11px; color: var(--navy); font-family: var(--serif); font-size: 22px; font-weight: 400; line-height: 1.28; }
+.detail-list h3 { min-height: 58px; margin: 0 0 11px; color: var(--navy); font-family: var(--serif); font-size: 22px; font-weight: 600; line-height: 1.28; }
 .detail-list p { margin: 0; color: var(--muted); font-size: 12.5px; line-height: 1.72; }
 .detail-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-top: 30px; border: 1px solid var(--line); border-bottom: 0; background: var(--white); box-shadow: 0 18px 46px rgba(7,26,45,.05); }
 .detail-columns::before { content: "02  /  HỒ SƠ & KẾT QUẢ TƯ VẤN"; grid-column: 1 / -1; padding: 18px 24px; border-bottom: 3px solid var(--gold); color: var(--white); background: var(--navy); font-size: 11.5px; line-height: 1.35; font-weight: 800; letter-spacing: 1.65px; }
@@ -275,7 +242,7 @@ h2 { color: var(--navy); font-size: clamp(34px, 3.4vw, 50px); line-height: 1.24;
 .detail-panel.accent::before { content: "02"; border-color: rgba(201,165,101,.65); color: #85714f; background: var(--white); }
 .detail-panel:hover { transform: none; background: var(--cream); box-shadow: inset 0 3px 0 var(--gold); }
 .detail-panel.accent:hover { background: var(--cream); box-shadow: inset 0 3px 0 var(--gold); }
-.detail-panel h3 { min-height: 48px; margin: 0 0 17px; padding-left: 59px; display: flex; flex-direction: column; justify-content: center; color: var(--navy); font-family: var(--serif); font-size: 23px; line-height: 1.2; font-weight: 400; }
+.detail-panel h3 { min-height: 48px; margin: 0 0 17px; padding-left: 59px; display: flex; flex-direction: column; justify-content: center; color: var(--navy); font-family: var(--serif); font-size: 23px; line-height: 1.2; font-weight: 600; }
 .detail-panel h3::before { content: "TÀI LIỆU ĐẦU VÀO"; margin-bottom: 5px; color: #85714f; font-family: var(--sans); font-size: 7.5px; font-weight: 800; letter-spacing: 1.45px; }
 .detail-panel.accent h3 { color: var(--navy); }
 .detail-panel.accent h3::before { content: "KẾT QUẢ BÀN GIAO"; color: #85714f; }
@@ -288,12 +255,12 @@ h2 { color: var(--navy); font-size: clamp(34px, 3.4vw, 50px); line-height: 1.24;
 .service-standards::after { display: none; }
 .service-standards::before { content: "03"; position: absolute; left: 28px; top: 27px; width: 44px; height: 44px; display: grid; place-content: center; border: 1px solid rgba(201,165,101,.65); border-radius: 50%; color: #85714f; background: var(--white); font-family: var(--serif); font-size: 13px; }
 .service-standards:hover { background: var(--cream); box-shadow: inset 0 3px 0 var(--gold), 0 18px 46px rgba(7,26,45,.05); }
-.service-standards h3 { min-height: 48px; margin: 0 0 17px; padding-left: 59px; display: flex; flex-direction: column; justify-content: center; color: var(--navy); font-family: var(--serif); font-size: 23px; line-height: 1.2; font-weight: 400; }
+.service-standards h3 { min-height: 48px; margin: 0 0 17px; padding-left: 59px; display: flex; flex-direction: column; justify-content: center; color: var(--navy); font-family: var(--serif); font-size: 23px; line-height: 1.2; font-weight: 600; }
 .service-standards h3::before { content: "NGUYÊN TẮC THỰC HIỆN"; margin-bottom: 5px; color: #85714f; font-family: var(--sans); font-size: 7.5px; font-weight: 800; letter-spacing: 1.45px; }
 .service-standards p { margin: 0; padding: 18px 0 0; border-top: 1px solid rgba(7,26,45,.085); border-left: 0; color: var(--muted); font-size: 12.5px; line-height: 1.8; }
 .detail-aside { position: sticky; top: 112px; }
 .detail-sidebar { padding: 34px 32px; color: var(--white); background: var(--navy); box-shadow: 0 18px 48px rgba(7,26,45,.13); }
-.detail-sidebar h3 { margin: 0 0 25px; color: var(--gold-light); font-family: var(--serif); font-size: 29px; line-height: 1.2; font-weight: 400; }
+.detail-sidebar h3 { margin: 0 0 25px; color: var(--gold-light); font-family: var(--serif); font-size: 29px; line-height: 1.2; font-weight: 600; }
 .numbered-process { margin: 0 0 28px; padding: 0; list-style: none; }
 .numbered-process li { display: grid; grid-template-columns: 34px 1fr; gap: 14px; margin: 0 0 19px; padding-bottom: 19px; border-bottom: 1px solid rgba(255,255,255,.11); }
 .numbered-process li > span { width: 30px; height: 30px; display: grid; place-content: center; border: 1px solid rgba(201,165,101,.62); border-radius: 50%; color: var(--gold-light); font-family: var(--serif); font-size: 11px; }
@@ -309,7 +276,7 @@ h2 { color: var(--navy); font-size: clamp(34px, 3.4vw, 50px); line-height: 1.24;
 .service-cta-box p { max-width: 580px; color: var(--muted); }
 
 .legal-hero { padding: 166px 0 82px; color: var(--white); background: linear-gradient(135deg, #061522, #0b2b45); }
-.legal-hero h1 { max-width: 820px; margin: 0; font-family: var(--serif); font-size: clamp(52px, 6vw, 78px); font-weight: 400; line-height: 1.06; letter-spacing: -.8px; }
+.legal-hero h1 { max-width: 820px; margin: 0; font-family: var(--serif); font-size: clamp(52px, 6vw, 78px); font-weight: 600; line-height: 1.06; letter-spacing: -.8px; }
 .legal-hero p { max-width: 720px; margin: 25px 0 0; color: rgba(255,255,255,.7); font-size: 16px; line-height: 1.8; }
 .legal-content { background: #fbfbfa; }
 .legal-layout { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 58px; align-items: start; }
@@ -319,7 +286,7 @@ h2 { color: var(--navy); font-size: clamp(34px, 3.4vw, 50px); line-height: 1.24;
 .legal-section + .legal-section { padding-top: 34px; border-top: 1px solid var(--line); }
 .legal-section:last-child { padding-bottom: 0; }
 .legal-section h2 { margin: 0 0 16px; font-size: 32px; line-height: 1.2; }
-.legal-section h3 { margin: 22px 0 8px; color: var(--navy); font-family: var(--serif); font-size: 21px; font-weight: 400; }
+.legal-section h3 { margin: 22px 0 8px; color: var(--navy); font-family: var(--serif); font-size: 21px; font-weight: 600; }
 .legal-section p, .legal-section li { color: var(--muted); font-size: 14px; line-height: 1.82; }
 .legal-section ul { margin: 14px 0 0; padding-left: 21px; }
 .legal-section a { color: #6f5b36; border-bottom: 1px solid rgba(201,165,101,.55); }
@@ -341,7 +308,7 @@ h2 { color: var(--navy); font-size: clamp(34px, 3.4vw, 50px); line-height: 1.24;
 .value-panel-head { min-height: 112px; display: grid; grid-template-columns: .8fr 1.2fr; gap: 28px; align-items: center; padding: 25px 29px; border-bottom: 1px solid rgba(255,255,255,.13); }
 .value-panel-head > div { display: flex; flex-direction: column; }
 .value-panel-head small { color: var(--gold); font-size: 8.5px; font-weight: 800; letter-spacing: 1.7px; }
-.value-panel-head strong { margin-top: 5px; color: var(--white); font-family: var(--serif); font-size: 22px; font-weight: 400; }
+.value-panel-head strong { margin-top: 5px; color: var(--white); font-family: var(--serif); font-size: 22px; font-weight: 600; }
 .value-panel-head p { margin: 0; color: rgba(255,255,255,.52); font-size: 11.5px; line-height: 1.7; }
 .value-list { display: grid; grid-template-columns: repeat(2, 1fr); }
 .value-item { min-height: 255px; display: flex; flex-direction: column; padding: 26px 28px 24px; border-right: 1px solid rgba(255,255,255,.12); border-bottom: 1px solid rgba(255,255,255,.12); background: rgba(255,255,255,.018); transition: background .25s, box-shadow .25s; }
@@ -351,7 +318,7 @@ h2 { color: var(--navy); font-size: clamp(34px, 3.4vw, 50px); line-height: 1.24;
 .value-meta { display: flex; align-items: center; justify-content: space-between; margin-bottom: 27px; }
 .value-index { color: var(--gold); font-family: var(--serif); font-size: 13px; }
 .value-tag { color: rgba(255,255,255,.38); font-size: 8px; font-weight: 800; letter-spacing: 1.35px; }
-.value-item h3 { min-height: 54px; margin: 0 0 11px; font-family: var(--serif); font-size: 21px; line-height: 1.28; font-weight: 400; }
+.value-item h3 { min-height: 54px; margin: 0 0 11px; font-family: var(--serif); font-size: 21px; line-height: 1.28; font-weight: 600; }
 .value-item p { margin: 0; color: rgba(255,255,255,.55); font-size: 11.5px; line-height: 1.7; }
 .value-commitment { margin-top: auto; padding-top: 17px; border-top: 1px solid rgba(255,255,255,.09); color: var(--gold-light); font-size: 9px; font-weight: 650; letter-spacing: .25px; }
 
@@ -369,7 +336,7 @@ h2 { color: var(--navy); font-size: clamp(34px, 3.4vw, 50px); line-height: 1.24;
 .step-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 28px; }
 .step-top small { color: #887654; font-size: 9px; font-weight: 800; letter-spacing: 1.5px; }
 .step-circle { width: 58px; height: 58px; display: grid; place-content: center; border: 1px solid var(--gold); border-radius: 50%; color: var(--gold); background: var(--white); font-family: var(--serif); font-size: 15px; box-shadow: inset 0 0 0 6px var(--cream); }
-.process-step h3 { min-height: 52px; margin: 0 0 10px; color: var(--navy); font-family: var(--serif); font-size: 21px; line-height: 1.3; font-weight: 400; }
+.process-step h3 { min-height: 52px; margin: 0 0 10px; color: var(--navy); font-family: var(--serif); font-size: 21px; line-height: 1.3; font-weight: 600; }
 .process-step p { margin: 0; color: var(--muted); font-size: 12.5px; line-height: 1.75; }
 .step-result { position: absolute; left: 25px; right: 25px; bottom: 24px; padding-top: 15px; border-top: 1px solid var(--line); color: #725f3d; font-size: 9.5px; font-weight: 700; letter-spacing: .35px; }
 
@@ -585,9 +552,9 @@ select:focus-visible, textarea:focus-visible {
                     linear-gradient(0deg, transparent 0 49.9%, rgba(255,255,255,.035) 50%, transparent 50.1%);
   background-size: 160px 160px; }
 .page-hero > .container { position: relative; z-index: 1; }
-.page-hero h1 { margin: 0; max-width: 20ch; font-family: var(--serif); font-weight: 400;
+.page-hero h1 { margin: 0; max-width: 20ch; font-family: var(--serif); font-weight: 600;
   font-size: clamp(36px, 4.3vw, 58px); line-height: 1.2; letter-spacing: -.1px; }
-.page-hero h1 em { color: var(--gold); font-style: italic; }
+.page-hero h1 em { color: var(--gold); font-style: normal; }
 .page-hero > .container > p { max-width: 64ch; margin: 24px 0 0; color: rgba(255,255,255,.74);
   font-size: 16px; line-height: 1.8; }
 
@@ -598,7 +565,7 @@ select:focus-visible, textarea:focus-visible {
 .breadcrumb li + li::before { content: "/"; margin-right: 9px; color: rgba(255,255,255,.3); }
 .breadcrumb [aria-current] { color: rgba(255,255,255,.8); }
 
-.prose h3 { margin: 34px 0 12px; color: var(--navy); font-family: var(--serif); font-size: 24px; font-weight: 400; }
+.prose h3 { margin: 34px 0 12px; color: var(--navy); font-family: var(--serif); font-size: 24px; font-weight: 600; }
 .prose p, .prose li { color: var(--muted); font-size: 15px; line-height: 1.85; }
 .prose strong { color: var(--ink); }
 
@@ -616,7 +583,7 @@ select:focus-visible, textarea:focus-visible {
 .pillar span { display: inline-grid; place-content: center; width: 44px; height: 44px; margin-bottom: 20px;
   border: 1px solid var(--brand-blue); border-radius: 50%; color: var(--brand-blue-deep);
   font-family: var(--serif); font-size: 15px; }
-.pillar h3 { margin: 0 0 11px; color: var(--navy); font-family: var(--serif); font-size: 21px; font-weight: 400; }
+.pillar h3 { margin: 0 0 11px; color: var(--navy); font-family: var(--serif); font-size: 21px; font-weight: 600; }
 .pillar p { margin: 0; color: var(--muted); font-size: 13.5px; line-height: 1.78; }
 
 .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px; margin-top: 46px; }
@@ -628,7 +595,7 @@ select:focus-visible, textarea:focus-visible {
   border-radius: 50%; background: linear-gradient(140deg, var(--navy), var(--brand-blue-deep));
   color: var(--gold-light); font-family: var(--serif); font-size: 29px; overflow: hidden; }
 .lawyer-photo img { width: 100%; height: 100%; object-fit: cover; }
-.lawyer-card h3 { margin: 0 0 4px; color: var(--navy); font-family: var(--serif); font-size: 25px; font-weight: 400; }
+.lawyer-card h3 { margin: 0 0 4px; color: var(--navy); font-family: var(--serif); font-size: 25px; font-weight: 600; }
 .lawyer-role { display: block; margin-bottom: 18px; color: var(--brand-blue-deep);
   text-transform: uppercase; font-size: 10px; font-weight: 800; letter-spacing: 1.5px; }
 .lawyer-card dl { margin: 0 0 18px; padding: 16px 0; border-top: 1px solid var(--line);
@@ -701,15 +668,9 @@ select:focus-visible, textarea:focus-visible {
 .error-code { margin: 0; color: rgba(21,133,208,.42); font-family: var(--serif);
   font-size: clamp(110px, 20vw, 200px); line-height: .9; letter-spacing: -4px; }
 .error-main h1 { margin: 12px 0 18px; font-family: var(--serif); font-size: clamp(30px, 4.4vw, 46px);
-  font-weight: 400; line-height: 1.16; }
+  font-weight: 600; line-height: 1.16; }
 .error-main > p { max-width: 54ch; margin: 0 auto 36px; color: rgba(255,255,255,.7); font-size: 15.5px; line-height: 1.8; }
 .error-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; }
-
-/* ---------- BẢN TIẾNG ANH ---------- */
-.lang-switch { display: inline-flex; align-items: center; gap: 6px; margin-left: 18px; padding: 6px 10px;
-  border: 1px solid rgba(255,255,255,.26); color: rgba(255,255,255,.82);
-  font-size: 11px; font-weight: 700; letter-spacing: 1px; transition: border-color .2s, color .2s; }
-.lang-switch:hover { border-color: var(--brand-blue); color: var(--white); }
 
 /* ---------- DẢI MIỄN TRỪ TRÁCH NHIỆM ---------- */
 .legal-disclaimer-bar { padding: 26px 0; border-top: 1px solid rgba(255,255,255,.1);
@@ -728,7 +689,6 @@ select:focus-visible, textarea:focus-visible {
   .contact-info-list li { padding: 18px 18px; gap: 14px; }
   .faq-item summary { padding-right: 44px; font-size: 17px; }
   .faq-item .faq-answer { padding-right: 0; }
-  .lang-switch { margin-left: 0; }
 }
 
 /* Link mũi tên đặt trên nền tối (khối liên hệ trang chủ) */
@@ -740,7 +700,7 @@ select:focus-visible, textarea:focus-visible {
 .team-note { display: flex; flex-direction: column; padding: 34px 36px 32px;
   border: 1px solid var(--line); border-top: 3px solid var(--gold); background: var(--white); }
 .team-note h3 { margin: 0 0 16px; color: var(--navy); font-family: var(--serif);
-  font-size: 25px; font-weight: 400; line-height: 1.3; }
+  font-size: 25px; font-weight: 600; line-height: 1.3; }
 .team-note p { margin: 0 0 14px; color: var(--muted); font-size: 14px; line-height: 1.85; }
 .team-note strong { color: var(--ink); }
 .team-note .arrow-link { margin-top: auto; align-self: flex-start; }
@@ -755,9 +715,21 @@ select:focus-visible, textarea:focus-visible {
   .header-inner { gap: 22px; }
   .site-nav { gap: 16px; }
   .site-nav a { font-size: 12.5px; }
-  .lang-switch { margin-left: 2px; }
   .header-cta { padding-left: 18px; }
   .header-cta small { display: none; }
   .brand-mark { width: 58px; height: 58px; }
   .brand-copy strong { font-size: 20px; }
 }
+
+/* Liên kết "xem thêm" dưới các khối tóm tắt ở trang chủ */
+.section-more { margin: 44px 0 0; text-align: center; }
+.values-copy .hero-actions { flex-wrap: wrap; gap: 18px 32px; }
+
+/* Lưới 2 cột cho trang Quy trình làm việc */
+.pillar-grid.two-col { grid-template-columns: repeat(2, 1fr); }
+@media (max-width: 980px) {
+  .pillar-grid.two-col { grid-template-columns: 1fr; }
+}
+
+/* Tiêu đề sans-serif: khoảng cách chữ chặt hơn cho cỡ lớn */
+.hero h1, h2, .page-hero h1, .detail-hero h1, .legal-hero h1, .error-main h1 { letter-spacing: -.02em; }
