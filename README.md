@@ -166,7 +166,7 @@ Mở trình duyệt tại <http://localhost:8000>.
 ## 7. Những gì đã được xây dựng sẵn
 
 **Tối ưu công cụ tìm kiếm**
-- Thẻ `canonical`, `description`, `hreflang` riêng cho từng trang
+- Thẻ `canonical`, `description` riêng cho từng trang; `hreflang` cho cặp trang chủ tiếng Việt – tiếng Anh (khai báo cả trong `sitemap.xml`)
 - Dữ liệu có cấu trúc: `LegalService`, `Service`, `BreadcrumbList`, `FAQPage`, `AboutPage`, `ContactPage`
 - `sitemap.xml` (15 đường dẫn), `robots.txt`
 - Thẻ Open Graph + Twitter Card kèm ảnh chia sẻ riêng (`assets/og-image.jpg`)
