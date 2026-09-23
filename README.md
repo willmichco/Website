@@ -115,6 +115,10 @@ Mọi chỗ cần điền đều được đánh dấu bằng `[dấu ngoặc vu
 
 ## 4. Hướng dẫn sửa nội dung thường gặp
 
+> **Sau khi sửa `styles.css`, `script.js` hoặc `bo-luat-hinh-su/reader.css`:** đổi số phiên bản `?v=...`
+> trong các thẻ `<link>`/`<script>` của mọi trang (tìm và thay `?v=` cũ bằng giá trị mới) để trình duyệt
+> của khách tải lại tệp mới thay vì dùng bản cũ trong bộ nhớ đệm.
+
 | Muốn sửa | Mở tệp | Tìm từ khóa |
 |---|---|---|
 | Số điện thoại | tất cả tệp `.html` + `script.js` | `0983498499` và `0983 498 499` |
