@@ -33,6 +33,28 @@ navLinks.forEach((link) => link.addEventListener('click', () => {
   menuButton?.setAttribute('aria-expanded', 'false');
 }));
 
+// Menu xổ "Dịch vụ": bấm mũi tên để mở/đóng (trên máy tính còn mở khi rê chuột).
+const subToggles = [...document.querySelectorAll('.nav-sub-toggle')];
+const closeSubMenus = (except) => subToggles.forEach((btn) => {
+  if (btn === except) return;
+  btn.parentElement.classList.remove('open');
+  btn.setAttribute('aria-expanded', 'false');
+});
+subToggles.forEach((btn) => btn.addEventListener('click', (event) => {
+  event.stopPropagation();
+  const isOpen = btn.parentElement.classList.toggle('open');
+  btn.setAttribute('aria-expanded', String(isOpen));
+  closeSubMenus(btn);
+}));
+if (subToggles.length) {
+  document.addEventListener('click', (event) => {
+    if (!event.target.closest('.nav-item')) closeSubMenus();
+  });
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') closeSubMenus();
+  });
+}
+
 const revealObserver = new IntersectionObserver((entries, observer) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {

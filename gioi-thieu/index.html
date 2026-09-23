@@ -62,11 +62,26 @@
         </a>
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span><span class="sr-only">Mở menu</span></button>
         <nav class="site-nav" id="site-nav" aria-label="Điều hướng chính">
-          <a href="./" class="active" aria-current="page">Giới thiệu</a>
-          <a href="../dich-vu/">Dịch vụ</a>
-          <a href="../bo-luat-hinh-su/">Bộ luật Hình sự</a>
+          <a href="../">Trang chủ</a>
+          <a href="../gioi-thieu/" class="active" aria-current="page">Giới thiệu</a>
+          <div class="nav-item">
+            <a href="../dich-vu/">Dịch vụ</a>
+            <button class="nav-sub-toggle" type="button" aria-expanded="false" aria-controls="nav-dich-vu"><span class="sr-only">Mở danh sách lĩnh vực dịch vụ</span></button>
+            <div class="nav-sub" id="nav-dich-vu">
+              <a href="../dich-vu/thua-ke/">Thừa kế</a>
+              <a href="../dich-vu/tranh-tung-giai-quyet-tranh-chap/">Tranh tụng &amp; Giải quyết tranh chấp</a>
+              <a href="../dich-vu/hon-nhan-gia-dinh/">Hôn nhân &amp; Gia đình</a>
+              <a href="../dich-vu/dat-dai-bat-dong-san/">Đất đai &amp; Bất động sản</a>
+              <a href="../dich-vu/lao-dong-viec-lam/">Lao động &amp; Việc làm</a>
+              <a href="../dich-vu/hinh-su/">Hình sự</a>
+              <a href="../dich-vu/dan-su/">Dân sự</a>
+              <a href="../dich-vu/cong-chung/">Công chứng</a>
+              <a class="nav-sub-all" href="../dich-vu/">Tất cả lĩnh vực <span aria-hidden="true">→</span></a>
+            </div>
+          </div>
           <a href="../vi-sao-chon-chung-toi/">Đồng hành</a>
           <a href="../quy-trinh-lam-viec/">Quy trình</a>
+          <a href="../bo-luat-hinh-su/">Bộ luật Hình sự</a>
           <a href="../lien-he/">Liên hệ</a>
         </nav>
         <a class="header-cta" href="tel:0983498499">
@@ -83,8 +98,10 @@
             <li><a href="../">Trang chủ</a></li>
             <li aria-current="page">Giới thiệu &amp; Đội ngũ</li>
           </ol>
-          <div class="eyebrow light"><span></span> VỀ CHÚNG TÔI</div>
+          <div class="hero-emblem" aria-hidden="true"></div>
+          <div class="eyebrow light"><span></span> VỀ CHÚNG TÔI<span></span></div>
           <h1>Một hãng luật được xây trên <em>sự cẩn trọng</em></h1>
+          <div class="hero-rule" aria-hidden="true"></div>
           <p>Công Ty Luật TNHH Luật Sư Nam hoạt động theo Giấy đăng ký hoạt động do Sở Tư pháp cấp, cung cấp dịch vụ pháp lý cho cá nhân và doanh nghiệp tại Thành phố Hồ Chí Minh và các tỉnh thành trên cả nước.</p>
         </div>
       </section>
@@ -115,21 +132,30 @@
           </div>
           <div class="pillar-grid">
           <article class="pillar reveal">
-            <span>01</span>
+            <span>I</span>
             <h3>Nền tảng pháp lý vững</h3>
             <p>Mỗi khuyến nghị đều được đối chiếu với văn bản quy phạm pháp luật đang có hiệu lực, án lệ và thực tiễn xét xử, thay vì dựa trên kinh nghiệm cảm tính.</p>
           </article>
           <article class="pillar reveal delay-1">
-            <span>02</span>
+            <span>II</span>
             <h3>Tư duy thực tiễn</h3>
             <p>Chúng tôi cân nhắc chi phí, thời gian, khả năng thi hành và quan hệ giữa các bên — bởi một phương án đúng luật nhưng không khả thi thì chưa phải là giải pháp.</p>
           </article>
           <article class="pillar reveal delay-2">
-            <span>03</span>
+            <span>III</span>
             <h3>Chuẩn mực nghề nghiệp</h3>
             <p>Hành nghề theo Luật Luật sư và Bộ Quy tắc Đạo đức và Ứng xử nghề nghiệp luật sư Việt Nam: bảo mật, độc lập, trung thực và kiểm tra xung đột lợi ích trước khi nhận việc.</p>
           </article>
           </div>
+        </div>
+      </section>
+
+      <section class="quote-band">
+        <div class="container">
+          <figure class="reveal">
+            <blockquote><p>Một lời khuyên trung thực có giá trị hơn một cam kết dễ nghe.</p></blockquote>
+            <figcaption>Triết lý hành nghề · Luật Sư Nam</figcaption>
+          </figure>
         </div>
       </section>
 
@@ -143,8 +169,8 @@
             <p>Mỗi hồ sơ có một luật sư chịu trách nhiệm xuyên suốt, để khách hàng luôn biết cần trao đổi với ai.</p>
           </div>
           <div class="team-grid team-grid-single">
-          <article class="lawyer-card reveal">
-            <div class="lawyer-photo" aria-hidden="true">N</div>
+          <article class="lawyer-card has-portrait reveal">
+            <div class="lawyer-photo"><img src="../assets/luat-su-nam-thuc-te.webp" alt="Luật sư Nam tham gia tố tụng tại Tòa" width="1005" height="1020" loading="lazy" /></div>
             <h3>Luật sư Nam</h3>
             <span class="lawyer-role">Luật sư điều hành</span>
             <p>Phụ trách chuyên môn và trực tiếp đồng hành cùng khách hàng trong các vụ việc tranh tụng và tư vấn phức tạp. Định hướng của luật sư là làm rõ mục tiêu thực sự của khách hàng trước khi lựa chọn con đường pháp lý phù hợp.</p>
@@ -206,7 +232,7 @@
             <div class="eyebrow"><span></span> CAM KẾT NGHỀ NGHIỆP <span></span></div>
             <h2>Ranh giới nghề nghiệp <em>rõ ràng</em></h2>
           </div>
-          <div class="prose reveal" style="max-width: 880px; margin: 0 auto;">
+          <div class="prose charter reveal">
             <h3>Bảo mật thông tin khách hàng</h3>
             <p>Luật sư và nhân viên của công ty không tiết lộ thông tin về vụ việc, về khách hàng mà mình biết được trong khi hành nghề, trừ trường hợp được khách hàng đồng ý bằng văn bản hoặc pháp luật có quy định khác. Nghĩa vụ này được quy định tại <strong>Điều 25 Luật Luật sư</strong> và <strong>Quy tắc 7</strong> Bộ Quy tắc Đạo đức và Ứng xử nghề nghiệp luật sư Việt Nam, và tiếp tục có hiệu lực ngay cả sau khi vụ việc đã kết thúc.</p>
 
@@ -243,7 +269,7 @@
           </a>
           <p>Đồng hành pháp lý vững vàng cùng cá nhân và doanh nghiệp Việt Nam.</p>
         </div>
-        <div class="footer-col"><h4>Liên kết</h4><a href="./">Giới thiệu &amp; Đội ngũ</a><a href="../dich-vu/">Dịch vụ</a><a href="../bo-luat-hinh-su/">Bộ luật Hình sự</a><a href="../vi-sao-chon-chung-toi/">Vì sao chọn chúng tôi</a><a href="../quy-trinh-lam-viec/">Quy trình làm việc</a><a href="../lien-he/">Liên hệ</a></div>
+        <div class="footer-col"><h4>Liên kết</h4><a href="../gioi-thieu/">Giới thiệu &amp; Đội ngũ</a><a href="../dich-vu/">Dịch vụ</a><a href="../vi-sao-chon-chung-toi/">Vì sao chọn chúng tôi</a><a href="../quy-trinh-lam-viec/">Quy trình làm việc</a><a href="../bo-luat-hinh-su/">Bộ luật Hình sự</a><a href="../lien-he/">Liên hệ</a></div>
         <div class="footer-col footer-services"><h4>Lĩnh vực</h4><a href="../dich-vu/thua-ke/">Thừa kế</a><a href="../dich-vu/tranh-tung-giai-quyet-tranh-chap/">Tranh tụng &amp; Giải quyết tranh chấp</a><a href="../dich-vu/hon-nhan-gia-dinh/">Hôn nhân &amp; Gia đình</a><a href="../dich-vu/dat-dai-bat-dong-san/">Đất đai &amp; Bất động sản</a><a href="../dich-vu/lao-dong-viec-lam/">Lao động &amp; Việc làm</a><a href="../dich-vu/hinh-su/">Hình sự</a><a href="../dich-vu/dan-su/">Dân sự</a><a href="../dich-vu/cong-chung/">Công chứng</a></div>
         <div class="footer-col address"><h4>Văn phòng</h4><p>22c Vũ Ngọc Phan,<br />Phường Bình Lợi Trung,<br />Thành phố Hồ Chí Minh</p><p>SĐT: <a href="tel:0983498499">0983 498 499</a><br />Email: <a href="mailto:luatsunam.hcm@gmail.com">luatsunam.hcm@gmail.com</a></p><p>Thứ 2 — Thứ 6: 08:00 — 17:30</p></div>
       </div>
