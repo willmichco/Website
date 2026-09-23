@@ -54,7 +54,8 @@
   };
   var mode = TOC.withCommentary ? pref.get('mode', 'both') : 'law';
   if (['both', 'law', 'cm'].indexOf(mode) < 0) mode = 'both';
-  var fs = Math.min(20, Math.max(14, +pref.get('fs', 16) || 16));
+  var fs = 16;                                  // cỡ chữ cố định
+  try { localStorage.removeItem('lx.fs'); } catch (e) { /* bỏ qua */ }
 
   /* ================================================================
    * 3. BỐ CỤC & NEO VỊ TRÍ ĐỌC
@@ -444,13 +445,6 @@
     });
     $$('[data-mode]').forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.mode === m)); });
     pref.set('mode', m);
-  }
-  function setFs(v) {
-    v = Math.min(20, Math.max(14, v));
-    if (v === fs) return;
-    keep(function () { fs = v; root.style.setProperty('--lx-fs', v + 'px'); refreshPlaceholders(); });
-    pref.set('fs', v);
-    toast('Cỡ chữ: ' + v + 'px');
   }
   function openCm(art, force) {
     var on = force === true ? true : !art.classList.contains('show-cm');
@@ -915,7 +909,6 @@
   $('#lx-clear').addEventListener('click', function () { qEl.value = ''; hideSug(); qEl.focus(); });
 
   $$('[data-mode]').forEach(function (b) { b.addEventListener('click', function () { setMode(b.dataset.mode); }); });
-  $$('[data-fs]').forEach(function (b) { b.addEventListener('click', function () { setFs(fs + +b.dataset.fs); }); });
   $$('[data-try]').forEach(function (b) {
     b.addEventListener('click', function () { qEl.value = b.dataset.try; submit(); });
   });

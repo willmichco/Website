@@ -64,13 +64,12 @@
 .lx-sg-t { flex: 0 0 auto; color: var(--muted); font-size: 11px; letter-spacing: .3px; }
 .lx-sg-full { color: var(--brand-blue-deep) !important; }
 .lx-sg mark, .lx-hit mark { background: var(--lx-hit); color: inherit; border-radius: 2px; padding: 0 1px; }
-.lx-seg, .lx-fsz { display: inline-flex; flex: 0 0 auto; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; background: #fff; }
-.lx-seg button, .lx-fsz button { height: 40px; padding: 0 13px; border: 0; border-left: 1px solid var(--line); background: transparent;
+.lx-seg { display: inline-flex; flex: 0 0 auto; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; background: #fff; }
+.lx-seg button { height: 40px; padding: 0 13px; border: 0; border-left: 1px solid var(--line); background: transparent;
   color: #4b5b6a; font-size: 12.5px; font-weight: 600; cursor: pointer; white-space: nowrap; transition: background .15s, color .15s; }
-.lx-seg button:first-child, .lx-fsz button:first-child { border-left: 0; }
-.lx-seg button:hover, .lx-fsz button:hover { background: #f2f5f8; color: var(--navy); }
+.lx-seg button:first-child { border-left: 0; }
+.lx-seg button:hover { background: #f2f5f8; color: var(--navy); }
 .lx-seg button[aria-pressed="true"] { background: var(--navy); color: #fff; }
-.lx-fsz button { padding: 0 11px; font-family: var(--serif); font-size: 14px; }
 
 /* ---------- Khung chính ---------- */
 .lx-body { width: min(calc(100% - 48px), 1320px); margin-inline: auto; display: grid; grid-template-columns: 300px minmax(0, 1fr);
@@ -294,7 +293,6 @@ mark.lx-hl { background: var(--lx-hit); color: inherit; }
   .lx-search { flex-basis: calc(100% - 140px); }
   .lx-seg { order: 3; flex: 1 1 auto; }
   .lx-seg button { flex: 1; padding: 0 8px; }
-  .lx-fsz { order: 4; }
   .lx-search kbd { display: none; }
   .lx-search input { padding-right: 40px; }
   .lx-clear { right: 8px; }
@@ -368,3 +366,8 @@ mark.lx-hl { background: var(--lx-hit); color: inherit; }
   /* tránh chồng lên nút "Liên hệ" nổi ở góc phải */
   .lx-nav { left: 14px; transform: none; }
 }
+
+/* ---------- Căn đều hai bên cho văn bản điều luật và bình luận ---------- */
+.lx-law p, .lx-cm p { text-align: justify; text-justify: inter-word; hyphens: manual; }
+/* Tiêu đề nhỏ và dòng chuyển tiếp giữ căn trái để không bị giãn chữ */
+.lx-law p.h, .lx-cm p.h, .lx-cm p.s { text-align: left; }
