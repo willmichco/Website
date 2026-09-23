@@ -16,3 +16,4 @@ RedirectMatch 301 ^/dieu-khoan-su-dung\.html$ /dieu-khoan-su-dung/
 RedirectMatch 301 ^/gioi-thieu\.html$ /gioi-thieu/
 RedirectMatch 301 ^/lien-he\.html$ /lien-he/
 RedirectMatch 301 ^/mien-tru-trach-nhiem\.html$ /mien-tru-trach-nhiem/
+RedirectMatch 301 ^/en(/.*)?$ /

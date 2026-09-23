@@ -88,7 +88,6 @@ Mọi chỗ cần điền đều được đánh dấu bằng `[dấu ngoặc vu
 │   ├── index.html · reader.js · reader.css · lx-core.js · search-worker.js
 │   └── data/                       Dữ liệu sinh tự động từ tệp Word — không sửa tay
 ├── chinh-sach-bao-mat/ · dieu-khoan-su-dung/ · mien-tru-trach-nhiem/
-├── en/                             Bản tiếng Anh — ĐANG TẠM TẮT (/en/ chuyển về trang chủ; nội dung giữ ở index.disabled.html)
 ├── 404.html                        Trang báo lỗi (dùng đường dẫn tuyệt đối từ gốc)
 ├── *.html ở thư mục gốc            (địa chỉ cũ — tự chuyển hướng, noindex)
 ├── _redirects                      Chuyển hướng 301 cho Netlify / Cloudflare Pages
@@ -174,7 +173,7 @@ Mở trình duyệt tại <http://localhost:8000>.
 ## 7. Những gì đã được xây dựng sẵn
 
 **Tối ưu công cụ tìm kiếm**
-- Thẻ `canonical`, `description` riêng cho từng trang; `hreflang` cho cặp trang chủ tiếng Việt – tiếng Anh (khai báo cả trong `sitemap.xml`)
+- Thẻ `canonical`, `description` riêng cho từng trang (website chỉ có bản tiếng Việt)
 - Dữ liệu có cấu trúc: `LegalService`, `Service`, `BreadcrumbList`, `FAQPage`, `AboutPage`, `ContactPage`
 - `sitemap.xml` (15 đường dẫn), `robots.txt`
 - Thẻ Open Graph + Twitter Card kèm ảnh chia sẻ riêng (`assets/og-image.jpg`)
